@@ -1,0 +1,18 @@
+{
+	"extension": {
+		"version": "0.5.0",
+		"json": 2
+	},
+	"project": {
+		"name": "microcontroller",
+		"description": "Hailstone numbers sequence, light controlled motor, anticipatory obstacle avoidance;",
+		"creationDate": "1/23/2024, 12:39:54 PM",
+		"platform": "EXP",
+		"language": "python",
+		"slot": 1,
+		"sdkVersion": "EXP_1_0_0_9",
+		"python": {
+			"main": "src/main.py"
+		}
+	}
+}
