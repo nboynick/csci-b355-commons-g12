@@ -1,0 +1,18 @@
+{
+	"extension": {
+		"version": "0.5.0",
+		"json": 2
+	},
+	"project": {
+		"name": "sensor-characteristics",
+		"description": "active directionality sensing, accuracy measurement, phototaxis, color track;",
+		"creationDate": "1/27/2024, 4:47:56 PM",
+		"platform": "EXP",
+		"language": "python",
+		"slot": 1,
+		"sdkVersion": "EXP_1_0_0_9",
+		"python": {
+			"main": "src/main.py"
+		}
+	}
+}
