@@ -54,6 +54,16 @@ def calibrate_drivetrain():
 calibrate_drivetrain()
 
 ### PROJECT SPECIFIC CODE BELOW HERE ###############################################################
+"""Basic project choices
+
+Needing resolution:
+  - For the optical-sensor-rotation-unit, what are we considering degree numbers?
+    * Straight forward is 0°, towards left is negative
+    * Straight forwards is 0°, towards left is positive --- SERVO DEFAULT
+    * Straight forwards is 180°, towards left is negative
+    * Straight forwards is 150°, towards left is negative --- POTENTIOMETER DEFAULT
+"""
+
 ### 1: Active Directionality Sensing
 def find_light_source(reset_position=False, verbose=False):
     """Finds the direction of the strongest light source.
@@ -174,7 +184,37 @@ def calculate_rms_error(angle_count=6, verbose=False, use_servo_angle=False):
     return avg_err
 
 ### 3: Phototaxis
+"""Notes to ourselves for this assignmnet part:
+Algorithm:
+- Do full perimiter sweep for lights. (I.e., perform find_light_source, rotate 90°, repeat 4x)
+- Cases: light vs no-light
+  - NO-LIGHT: Random movements of random duration or search pattern (circles, by sqaures, etc.)
+  - LIGHT: * Orient the bot in the direction of the light (i.e., facing straight towards it).
+           * Move closeer to the light (by how much, how fast, based on some criterion such as a
+             registered dip in the light levels being picked up by the optical sensor?)
+           * Once stoping, do we only check in the direction we were travelling or do a full new
+             preimiter scan?
 
+Needed info: * How long does a full perimiter scan take?
+             * If we attempt to just correct the direction we are already travelling in, how long
+                 would a localized scan take, and thus how much would the bot move during the scan
+                 itself?
+             * How accurate is the heading reported by the drivetrain?
+             * At what point do we consider the output from the optical sensor as a found light
+               source vs just background-light-noise?
+
+Potentially useful commands:
+  * drivetrain.heading() -> Get the current orientation of the drivetrain, and thus the bot
+  * drivetrain.rotation() -> Unsure how this differs from heading()
+  * drivetrain.turn_for() -> Turn the bot right/left by a specified angle
+  * drivetrain.turn_to_heading() -> Turn the bot to a specified, absolute heading
+  * drivetrain.drive_for() -> Move the robot forwards/backwards by a certain distance
+  * drivetrain.set_drive_velocity() -> Set the speed in percentage points
+
+Personal interest:
+  * drivetrain.temperature() -> Can the motors overheat and stop working? And do we need to take
+                                this into consideration?
+"""
 ### 4: Color Track
 
 ### DELETED BAD CODE
