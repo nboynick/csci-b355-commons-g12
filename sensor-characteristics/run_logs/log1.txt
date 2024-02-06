@@ -1,0 +1,4728 @@
+Executing main().
+Hue: 273.
+Distance: 0.
+Executing convert_to_color(273).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 0
+Hue: 309.
+Distance: 10.
+Executing convert_to_color(309).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 10
+Hue: 304.
+Distance: 20.
+Executing convert_to_color(304).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 20
+Hue: 291.
+Distance: 30.
+Executing convert_to_color(291).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 30
+Hue: 275.
+Distance: 40.
+Executing convert_to_color(275).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 40
+Hue: 262.
+Distance: 50.
+Executing convert_to_color(262).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 50
+Hue: 260.
+Distance: 60.
+Executing convert_to_color(260).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 60
+Hue: 254.
+Distance: 70.
+Executing convert_to_color(254).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 70
+Hue: 248.
+Distance: 80.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 80
+Hue: 244.
+Distance: 90.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 90
+Hue: 242.
+Distance: 100.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 100
+Hue: 240.
+Distance: 110.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 110
+Hue: 239.
+Distance: 120.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 120
+Hue: 237.
+Distance: 130.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 130
+Hue: 237.
+Distance: 140.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 140
+Hue: 234.
+Distance: 150.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 150
+Hue: 229.
+Distance: 160.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 160
+Hue: 227.
+Distance: 170.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 170
+Hue: 215.
+Distance: 180.
+Executing convert_to_color(215).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 180
+Hue: 199.
+Distance: 190.
+Executing convert_to_color(199).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 237.
+Distance: 190.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 190
+Hue: 237.
+Distance: 200.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 200
+Hue: 237.
+Distance: 210.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 210
+Hue: 238.
+Distance: 220.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 220
+Hue: 238.
+Distance: 230.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 230
+Hue: 238.
+Distance: 240.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 240
+Hue: 237.
+Distance: 250.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 250
+Hue: 236.
+Distance: 260.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 260
+Hue: 236.
+Distance: 270.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 270
+Hue: 236.
+Distance: 280.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 280
+Hue: 234.
+Distance: 290.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 290
+Hue: 232.
+Distance: 300.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 300
+Hue: 231.
+Distance: 310.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 310
+Hue: 226.
+Distance: 320.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 320
+Hue: 223.
+Distance: 330.
+Executing convert_to_color(223).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 330
+Hue: 219.
+Distance: 340.
+Executing convert_to_color(219).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 340
+Hue: 211.
+Distance: 350.
+Executing convert_to_color(211).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 350
+Hue: 186.
+Distance: 360.
+Executing convert_to_color(186).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 238.
+Distance: 360.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 360
+Hue: 238.
+Distance: 370.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 370
+Hue: 239.
+Distance: 380.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 380
+Hue: 239.
+Distance: 390.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 390
+Hue: 240.
+Distance: 400.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 400
+Hue: 240.
+Distance: 410.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 410
+Hue: 239.
+Distance: 420.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 420
+Hue: 238.
+Distance: 430.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 430
+Hue: 238.
+Distance: 440.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 440
+Hue: 238.
+Distance: 450.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 450
+Hue: 237.
+Distance: 460.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 460
+Hue: 235.
+Distance: 470.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 470
+Hue: 233.
+Distance: 480.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 480
+Hue: 232.
+Distance: 490.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 490
+Hue: 227.
+Distance: 500.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 500
+Hue: 222.
+Distance: 510.
+Executing convert_to_color(222).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 510
+Hue: 210.
+Distance: 520.
+Executing convert_to_color(210).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 520
+Hue: 162.
+Distance: 530.
+Executing convert_to_color(162).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 530.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 530
+Hue: 237.
+Distance: 540.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 540
+Hue: 238.
+Distance: 550.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 550
+Hue: 239.
+Distance: 560.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 560
+Hue: 242.
+Distance: 570.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 570
+Hue: 240.
+Distance: 580.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 580
+Hue: 241.
+Distance: 590.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 590
+Hue: 239.
+Distance: 600.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 600
+Hue: 239.
+Distance: 610.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 610
+Hue: 238.
+Distance: 620.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 620
+Hue: 238.
+Distance: 630.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 630
+Hue: 237.
+Distance: 640.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 640
+Hue: 236.
+Distance: 650.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 650
+Hue: 235.
+Distance: 660.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 660
+Hue: 232.
+Distance: 670.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 670
+Hue: 228.
+Distance: 680.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 680
+Hue: 226.
+Distance: 690.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 690
+Hue: 219.
+Distance: 700.
+Executing convert_to_color(219).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 700
+Hue: 206.
+Distance: 710.
+Executing convert_to_color(206).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 710
+Hue: 184.
+Distance: 720.
+Executing convert_to_color(184).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 238.
+Distance: 720.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 720
+Hue: 242.
+Distance: 730.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 730
+Hue: 244.
+Distance: 740.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 740
+Hue: 246.
+Distance: 750.
+Executing convert_to_color(246).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 750
+Hue: 249.
+Distance: 760.
+Executing convert_to_color(249).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 760
+Hue: 248.
+Distance: 770.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 770
+Hue: 246.
+Distance: 780.
+Executing convert_to_color(246).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 780
+Hue: 243.
+Distance: 790.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 790
+Hue: 242.
+Distance: 800.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 800
+Hue: 240.
+Distance: 810.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 810
+Hue: 240.
+Distance: 820.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 820
+Hue: 237.
+Distance: 830.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 830
+Hue: 237.
+Distance: 840.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 840
+Hue: 235.
+Distance: 850.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 850
+Hue: 233.
+Distance: 860.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 860
+Hue: 231.
+Distance: 870.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 870
+Hue: 227.
+Distance: 880.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 880
+Hue: 225.
+Distance: 890.
+Executing convert_to_color(225).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 890
+Hue: 221.
+Distance: 900.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 900
+Hue: 218.
+Distance: 910.
+Executing convert_to_color(218).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 910
+Hue: 214.
+Distance: 920.
+Executing convert_to_color(214).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 920
+Hue: 206.
+Distance: 930.
+Executing convert_to_color(206).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 930
+Hue: 197.
+Distance: 940.
+Executing convert_to_color(197).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 237.
+Distance: 940.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 940
+Hue: 238.
+Distance: 950.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 950
+Hue: 240.
+Distance: 960.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 960
+Hue: 243.
+Distance: 970.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 970
+Hue: 253.
+Distance: 980.
+Executing convert_to_color(253).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 980
+Hue: 258.
+Distance: 990.
+Executing convert_to_color(258).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 990
+Hue: 263.
+Distance: 1000.
+Executing convert_to_color(263).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1000
+Hue: 265.
+Distance: 1010.
+Executing convert_to_color(265).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1010
+Hue: 265.
+Distance: 1020.
+Executing convert_to_color(265).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1020
+Hue: 266.
+Distance: 1030.
+Executing convert_to_color(266).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1030
+Hue: 264.
+Distance: 1040.
+Executing convert_to_color(264).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1040
+Hue: 262.
+Distance: 1050.
+Executing convert_to_color(262).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1050
+Hue: 260.
+Distance: 1060.
+Executing convert_to_color(260).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1060
+Hue: 257.
+Distance: 1070.
+Executing convert_to_color(257).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1070
+Hue: 252.
+Distance: 1080.
+Executing convert_to_color(252).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1080
+Hue: 249.
+Distance: 1090.
+Executing convert_to_color(249).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1090
+Hue: 248.
+Distance: 1100.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1100
+Hue: 244.
+Distance: 1110.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1110
+Hue: 242.
+Distance: 1120.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1120
+Hue: 239.
+Distance: 1130.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1130
+Hue: 238.
+Distance: 1140.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1140
+Hue: 237.
+Distance: 1150.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1150
+Hue: 237.
+Distance: 1160.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1160
+Hue: 235.
+Distance: 1170.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1170
+Hue: 234.
+Distance: 1180.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1180
+Hue: 228.
+Distance: 1190.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1190
+Hue: 214.
+Distance: 1200.
+Executing convert_to_color(214).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1200
+Hue: 200.
+Distance: 1210.
+Executing convert_to_color(200).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1210
+Hue: 125.
+Distance: 1220.
+Executing convert_to_color(125).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1220
+Hue: 89.
+Distance: 1230.
+Executing convert_to_color(89).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 231.
+Distance: 1230.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1230
+Hue: 233.
+Distance: 1240.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1240
+Hue: 235.
+Distance: 1250.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1250
+Hue: 236.
+Distance: 1260.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1260
+Hue: 237.
+Distance: 1270.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1270
+Hue: 236.
+Distance: 1280.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1280
+Hue: 235.
+Distance: 1290.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1290
+Hue: 234.
+Distance: 1300.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1300
+Hue: 232.
+Distance: 1310.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1310
+Hue: 230.
+Distance: 1320.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1320
+Hue: 226.
+Distance: 1330.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1330
+Hue: 223.
+Distance: 1340.
+Executing convert_to_color(223).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1340
+Hue: 199.
+Distance: 1350.
+Executing convert_to_color(199).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 1350.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1350
+Hue: 237.
+Distance: 1360.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1360
+Hue: 240.
+Distance: 1370.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1370
+Hue: 243.
+Distance: 1380.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1380
+Hue: 245.
+Distance: 1390.
+Executing convert_to_color(245).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1390
+Hue: 242.
+Distance: 1400.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1400
+Hue: 240.
+Distance: 1410.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1410
+Hue: 239.
+Distance: 1420.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1420
+Hue: 237.
+Distance: 1430.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1430
+Hue: 235.
+Distance: 1440.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1440
+Hue: 235.
+Distance: 1450.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1450
+Hue: 233.
+Distance: 1460.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1460
+Hue: 231.
+Distance: 1470.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1470
+Hue: 227.
+Distance: 1480.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1480
+Hue: 224.
+Distance: 1490.
+Executing convert_to_color(224).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1490
+Hue: 220.
+Distance: 1500.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1500
+Hue: 165.
+Distance: 1510.
+Executing convert_to_color(165).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 1510.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1510
+Hue: 237.
+Distance: 1520.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1520
+Hue: 239.
+Distance: 1530.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1530
+Hue: 241.
+Distance: 1540.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1540
+Hue: 244.
+Distance: 1550.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1550
+Hue: 241.
+Distance: 1560.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1560
+Hue: 241.
+Distance: 1570.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1570
+Hue: 239.
+Distance: 1580.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1580
+Hue: 237.
+Distance: 1590.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1590
+Hue: 234.
+Distance: 1600.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1600
+Hue: 229.
+Distance: 1610.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1610
+Hue: 224.
+Distance: 1620.
+Executing convert_to_color(224).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1620
+Hue: 202.
+Distance: 1630.
+Executing convert_to_color(202).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1630
+Hue: 129.
+Distance: 1640.
+Executing convert_to_color(129).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1640
+Hue: 90.
+Distance: 1650.
+Executing convert_to_color(90).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 193.
+Distance: 1650.
+Executing convert_to_color(193).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 244.
+Distance: 1650.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1650
+Hue: 245.
+Distance: 1660.
+Executing convert_to_color(245).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1660
+Hue: 247.
+Distance: 1670.
+Executing convert_to_color(247).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1670
+Hue: 250.
+Distance: 1680.
+Executing convert_to_color(250).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1680
+Hue: 254.
+Distance: 1690.
+Executing convert_to_color(254).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1690
+Hue: 248.
+Distance: 1700.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1700
+Hue: 240.
+Distance: 1710.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1710
+Hue: 238.
+Distance: 1720.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1720
+Hue: 236.
+Distance: 1730.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1730
+Hue: 233.
+Distance: 1740.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1740
+Hue: 228.
+Distance: 1750.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1750
+Hue: 208.
+Distance: 1760.
+Executing convert_to_color(208).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1760
+Hue: 112.
+Distance: 1770.
+Executing convert_to_color(112).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1770
+Hue: 94.
+Distance: 1780.
+Executing convert_to_color(94).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 227.
+Distance: 1780.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1780
+Hue: 228.
+Distance: 1790.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1790
+Hue: 230.
+Distance: 1800.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1800
+Hue: 232.
+Distance: 1810.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1810
+Hue: 227.
+Distance: 1820.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1820
+Hue: 221.
+Distance: 1830.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1830
+Hue: 205.
+Distance: 1840.
+Executing convert_to_color(205).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1840
+Hue: 159.
+Distance: 1850.
+Executing convert_to_color(159).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 234.
+Distance: 1850.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1850
+Hue: 237.
+Distance: 1860.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1860
+Hue: 240.
+Distance: 1870.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1870
+Hue: 242.
+Distance: 1880.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1880
+Hue: 239.
+Distance: 1890.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1890
+Hue: 237.
+Distance: 1900.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1900
+Hue: 237.
+Distance: 1910.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1910
+Hue: 235.
+Distance: 1920.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1920
+Hue: 233.
+Distance: 1930.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1930
+Hue: 227.
+Distance: 1940.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1940
+Hue: 201.
+Distance: 1950.
+Executing convert_to_color(201).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1950
+Hue: 104.
+Distance: 1960.
+Executing convert_to_color(104).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 1960
+Hue: 88.
+Distance: 1970.
+Executing convert_to_color(88).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 175.
+Distance: 1970.
+Executing convert_to_color(175).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 239.
+Distance: 1970.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1970
+Hue: 241.
+Distance: 1980.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1980
+Hue: 239.
+Distance: 1990.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 1990
+Hue: 240.
+Distance: 2000.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2000
+Hue: 240.
+Distance: 2010.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2010
+Hue: 237.
+Distance: 2020.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2020
+Hue: 236.
+Distance: 2030.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2030
+Hue: 232.
+Distance: 2040.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2040
+Hue: 219.
+Distance: 2050.
+Executing convert_to_color(219).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2050
+Hue: 189.
+Distance: 2060.
+Executing convert_to_color(189).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 226.
+Distance: 2060.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2060
+Hue: 230.
+Distance: 2070.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2070
+Hue: 231.
+Distance: 2080.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2080
+Hue: 232.
+Distance: 2090.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2090
+Hue: 228.
+Distance: 2100.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2100
+Hue: 210.
+Distance: 2110.
+Executing convert_to_color(210).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2110
+Hue: 120.
+Distance: 2120.
+Executing convert_to_color(120).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2120
+Hue: 84.
+Distance: 2130.
+Executing convert_to_color(84).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 168.
+Distance: 2130.
+Executing convert_to_color(168).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 244.
+Distance: 2130.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2130
+Hue: 246.
+Distance: 2140.
+Executing convert_to_color(246).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2140
+Hue: 248.
+Distance: 2150.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2150
+Hue: 251.
+Distance: 2160.
+Executing convert_to_color(251).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2160
+Hue: 248.
+Distance: 2170.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2170
+Hue: 241.
+Distance: 2180.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2180
+Hue: 238.
+Distance: 2190.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2190
+Hue: 234.
+Distance: 2200.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2200
+Hue: 231.
+Distance: 2210.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2210
+Hue: 224.
+Distance: 2220.
+Executing convert_to_color(224).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2220
+Hue: 212.
+Distance: 2230.
+Executing convert_to_color(212).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2230
+Hue: 121.
+Distance: 2240.
+Executing convert_to_color(121).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2240
+Hue: 89.
+Distance: 2250.
+Executing convert_to_color(89).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 206.
+Distance: 2250.
+Executing convert_to_color(206).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2250
+Hue: 214.
+Distance: 2260.
+Executing convert_to_color(214).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2260
+Hue: 229.
+Distance: 2270.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2270
+Hue: 232.
+Distance: 2280.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2280
+Hue: 228.
+Distance: 2290.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2290
+Hue: 216.
+Distance: 2300.
+Executing convert_to_color(216).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2300
+Hue: 195.
+Distance: 2310.
+Executing convert_to_color(195).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 232.
+Distance: 2310.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2310
+Hue: 233.
+Distance: 2320.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2320
+Hue: 234.
+Distance: 2330.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2330
+Hue: 235.
+Distance: 2340.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2340
+Hue: 234.
+Distance: 2350.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2350
+Hue: 232.
+Distance: 2360.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2360
+Hue: 222.
+Distance: 2370.
+Executing convert_to_color(222).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2370
+Hue: 202.
+Distance: 2380.
+Executing convert_to_color(202).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2380
+Hue: 108.
+Distance: 2390.
+Executing convert_to_color(108).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2390
+Hue: 89.
+Distance: 2400.
+Executing convert_to_color(89).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 200.
+Distance: 2400.
+Executing convert_to_color(200).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2400
+Hue: 207.
+Distance: 2410.
+Executing convert_to_color(207).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2410
+Hue: 217.
+Distance: 2420.
+Executing convert_to_color(217).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2420
+Hue: 218.
+Distance: 2430.
+Executing convert_to_color(218).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2430
+Hue: 212.
+Distance: 2440.
+Executing convert_to_color(212).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2440
+Hue: 99.
+Distance: 2450.
+Executing convert_to_color(99).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 107.
+Distance: 2450.
+Executing convert_to_color(107).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2450
+Hue: 111.
+Distance: 2460.
+Executing convert_to_color(111).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2460
+Hue: 100.
+Distance: 2470.
+Executing convert_to_color(100).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2470
+Hue: 97.
+Distance: 2480.
+Executing convert_to_color(97).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 194.
+Distance: 2480.
+Executing convert_to_color(194).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 242.
+Distance: 2480.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2480
+Hue: 245.
+Distance: 2490.
+Executing convert_to_color(245).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2490
+Hue: 246.
+Distance: 2500.
+Executing convert_to_color(246).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2500
+Hue: 247.
+Distance: 2510.
+Executing convert_to_color(247).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2510
+Hue: 248.
+Distance: 2520.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2520
+Hue: 238.
+Distance: 2530.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2530
+Hue: 236.
+Distance: 2540.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2540
+Hue: 232.
+Distance: 2550.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2550
+Hue: 218.
+Distance: 2560.
+Executing convert_to_color(218).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2560
+Hue: 123.
+Distance: 2570.
+Executing convert_to_color(123).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2570
+Hue: 88.
+Distance: 2580.
+Executing convert_to_color(88).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 97.
+Distance: 2580.
+Executing convert_to_color(97).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 234.
+Distance: 2580.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2580
+Hue: 235.
+Distance: 2590.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2590
+Hue: 235.
+Distance: 2600.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2600
+Hue: 235.
+Distance: 2610.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2610
+Hue: 235.
+Distance: 2620.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2620
+Hue: 232.
+Distance: 2630.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2630
+Hue: 219.
+Distance: 2640.
+Executing convert_to_color(219).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2640
+Hue: 183.
+Distance: 2650.
+Executing convert_to_color(183).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 224.
+Distance: 2650.
+Executing convert_to_color(224).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2650
+Hue: 227.
+Distance: 2660.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2660
+Hue: 231.
+Distance: 2670.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2670
+Hue: 233.
+Distance: 2680.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2680
+Hue: 232.
+Distance: 2690.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2690
+Hue: 229.
+Distance: 2700.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2700
+Hue: 218.
+Distance: 2710.
+Executing convert_to_color(218).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2710
+Hue: 203.
+Distance: 2720.
+Executing convert_to_color(203).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2720
+Hue: 131.
+Distance: 2730.
+Executing convert_to_color(131).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 2730
+Hue: 88.
+Distance: 2740.
+Executing convert_to_color(88).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 225.
+Distance: 2740.
+Executing convert_to_color(225).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2740
+Hue: 228.
+Distance: 2750.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2750
+Hue: 233.
+Distance: 2760.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2760
+Hue: 233.
+Distance: 2770.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2770
+Hue: 233.
+Distance: 2780.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2780
+Hue: 231.
+Distance: 2790.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2790
+Hue: 228.
+Distance: 2800.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2800
+Hue: 220.
+Distance: 2810.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2810
+Hue: 192.
+Distance: 2820.
+Executing convert_to_color(192).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 2820.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2820
+Hue: 238.
+Distance: 2830.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2830
+Hue: 239.
+Distance: 2840.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2840
+Hue: 241.
+Distance: 2850.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2850
+Hue: 241.
+Distance: 2860.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2860
+Hue: 239.
+Distance: 2870.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2870
+Hue: 237.
+Distance: 2880.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2880
+Hue: 236.
+Distance: 2890.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2890
+Hue: 235.
+Distance: 2900.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2900
+Hue: 234.
+Distance: 2910.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2910
+Hue: 233.
+Distance: 2920.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2920
+Hue: 227.
+Distance: 2930.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2930
+Hue: 221.
+Distance: 2940.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2940
+Hue: 211.
+Distance: 2950.
+Executing convert_to_color(211).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2950
+Hue: 177.
+Distance: 2960.
+Executing convert_to_color(177).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 235.
+Distance: 2960.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2960
+Hue: 237.
+Distance: 2970.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2970
+Hue: 239.
+Distance: 2980.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2980
+Hue: 241.
+Distance: 2990.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 2990
+Hue: 243.
+Distance: 3000.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3000
+Hue: 241.
+Distance: 3010.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3010
+Hue: 240.
+Distance: 3020.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3020
+Hue: 238.
+Distance: 3030.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3030
+Hue: 237.
+Distance: 3040.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3040
+Hue: 236.
+Distance: 3050.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3050
+Hue: 235.
+Distance: 3060.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3060
+Hue: 234.
+Distance: 3070.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3070
+Hue: 234.
+Distance: 3080.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3080
+Hue: 232.
+Distance: 3090.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3090
+Hue: 230.
+Distance: 3100.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3100
+Hue: 228.
+Distance: 3110.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3110
+Hue: 226.
+Distance: 3120.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3120
+Hue: 224.
+Distance: 3130.
+Executing convert_to_color(224).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3130
+Hue: 219.
+Distance: 3140.
+Executing convert_to_color(219).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3140
+Hue: 214.
+Distance: 3150.
+Executing convert_to_color(214).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3150
+Hue: 205.
+Distance: 3160.
+Executing convert_to_color(205).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3160
+Hue: 165.
+Distance: 3170.
+Executing convert_to_color(165).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 235.
+Distance: 3170.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3170
+Hue: 238.
+Distance: 3180.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3180
+Hue: 241.
+Distance: 3190.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3190
+Hue: 247.
+Distance: 3200.
+Executing convert_to_color(247).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3200
+Hue: 247.
+Distance: 3210.
+Executing convert_to_color(247).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3210
+Hue: 246.
+Distance: 3220.
+Executing convert_to_color(246).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3220
+Hue: 243.
+Distance: 3230.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3230
+Hue: 241.
+Distance: 3240.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3240
+Hue: 238.
+Distance: 3250.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3250
+Hue: 237.
+Distance: 3260.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3260
+Hue: 236.
+Distance: 3270.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3270
+Hue: 235.
+Distance: 3280.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3280
+Hue: 236.
+Distance: 3290.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3290
+Hue: 235.
+Distance: 3300.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3300
+Hue: 235.
+Distance: 3310.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3310
+Hue: 234.
+Distance: 3320.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3320
+Hue: 233.
+Distance: 3330.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3330
+Hue: 233.
+Distance: 3340.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3340
+Hue: 232.
+Distance: 3350.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3350
+Hue: 231.
+Distance: 3360.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3360
+Hue: 230.
+Distance: 3370.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3370
+Hue: 229.
+Distance: 3380.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3380
+Hue: 223.
+Distance: 3390.
+Executing convert_to_color(223).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3390
+Hue: 222.
+Distance: 3400.
+Executing convert_to_color(222).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3400
+Hue: 217.
+Distance: 3410.
+Executing convert_to_color(217).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3410
+Hue: 212.
+Distance: 3420.
+Executing convert_to_color(212).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3420
+Hue: 203.
+Distance: 3430.
+Executing convert_to_color(203).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3430
+Hue: 175.
+Distance: 3440.
+Executing convert_to_color(175).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 3440.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3440
+Hue: 237.
+Distance: 3450.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3450
+Hue: 238.
+Distance: 3460.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3460
+Hue: 250.
+Distance: 3470.
+Executing convert_to_color(250).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3470
+Hue: 255.
+Distance: 3480.
+Executing convert_to_color(255).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3480
+Hue: 254.
+Distance: 3490.
+Executing convert_to_color(254).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3490
+Hue: 253.
+Distance: 3500.
+Executing convert_to_color(253).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3500
+Hue: 248.
+Distance: 3510.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3510
+Hue: 242.
+Distance: 3520.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3520
+Hue: 241.
+Distance: 3530.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3530
+Hue: 238.
+Distance: 3540.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3540
+Hue: 237.
+Distance: 3550.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3550
+Hue: 236.
+Distance: 3560.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3560
+Hue: 235.
+Distance: 3570.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3570
+Hue: 234.
+Distance: 3580.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3580
+Hue: 234.
+Distance: 3590.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3590
+Hue: 231.
+Distance: 3600.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3600
+Hue: 230.
+Distance: 3610.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3610
+Hue: 229.
+Distance: 3620.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3620
+Hue: 227.
+Distance: 3630.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3630
+Hue: 220.
+Distance: 3640.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3640
+Hue: 220.
+Distance: 3650.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3650
+Hue: 220.
+Distance: 3660.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3660
+Hue: 216.
+Distance: 3670.
+Executing convert_to_color(216).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3670
+Hue: 202.
+Distance: 3680.
+Executing convert_to_color(202).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3680
+Hue: 200.
+Distance: 3690.
+Executing convert_to_color(200).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 3690
+Hue: 204.
+Distance: 3700.
+Executing convert_to_color(204).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3700
+Hue: 209.
+Distance: 3710.
+Executing convert_to_color(209).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3710
+Hue: 216.
+Distance: 3720.
+Executing convert_to_color(216).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3720
+Hue: 221.
+Distance: 3730.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3730
+Hue: 220.
+Distance: 3740.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3740
+Hue: 222.
+Distance: 3750.
+Executing convert_to_color(222).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3750
+Hue: 225.
+Distance: 3760.
+Executing convert_to_color(225).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3760
+Hue: 224.
+Distance: 3770.
+Executing convert_to_color(224).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3770
+Hue: 220.
+Distance: 3780.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3780
+Hue: 220.
+Distance: 3790.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3790
+Hue: 219.
+Distance: 3800.
+Executing convert_to_color(219).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3800
+Hue: 220.
+Distance: 3810.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3810
+Hue: 216.
+Distance: 3820.
+Executing convert_to_color(216).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3820
+Hue: 213.
+Distance: 3830.
+Executing convert_to_color(213).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3830
+Hue: 213.
+Distance: 3840.
+Executing convert_to_color(213).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3840
+Hue: 206.
+Distance: 3850.
+Executing convert_to_color(206).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3850
+Hue: 187.
+Distance: 3860.
+Executing convert_to_color(187).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 239.
+Distance: 3860.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3860
+Hue: 241.
+Distance: 3870.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3870
+Hue: 250.
+Distance: 3880.
+Executing convert_to_color(250).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 3880
+Hue: 263.
+Distance: 3890.
+Executing convert_to_color(263).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 3890
+Hue: 272.
+Distance: 3900.
+Executing convert_to_color(272).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 3900
+Hue: 289.
+Distance: 3910.
+Executing convert_to_color(289).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 3910
+Hue: 299.
+Distance: 3920.
+Executing convert_to_color(299).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 3920
+Hue: 307.
+Distance: 3930.
+Executing convert_to_color(307).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 3930
+Hue: 314.
+Distance: 3940.
+Executing convert_to_color(314).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 3940
+Hue: 314.
+Distance: 3950.
+Executing convert_to_color(314).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 3950
+Hue: 315.
+Distance: 3960.
+Executing convert_to_color(315).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 3960
+Hue: 325.
+Distance: 3970.
+Executing convert_to_color(325).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 3970
+Hue: 319.
+Distance: 3980.
+Executing convert_to_color(319).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 3980
+Hue: 331.
+Distance: 3990.
+Executing convert_to_color(331).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 3990
+Hue: 339.
+Distance: 4000.
+Executing convert_to_color(339).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4000
+Hue: 343.
+Distance: 4010.
+Executing convert_to_color(343).
+Return: convert_to_color(): "purple"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 340.
+Distance: 4010.
+Executing convert_to_color(340).
+Return: convert_to_color(): "purple"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 246.
+Distance: 4010.
+Executing convert_to_color(246).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4010
+Hue: 243.
+Distance: 4020.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4020
+Hue: 239.
+Distance: 4030.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4030
+Hue: 238.
+Distance: 4040.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4040
+Hue: 236.
+Distance: 4050.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4050
+Hue: 236.
+Distance: 4060.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4060
+Hue: 235.
+Distance: 4070.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4070
+Hue: 235.
+Distance: 4080.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4080
+Hue: 235.
+Distance: 4090.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4090
+Hue: 236.
+Distance: 4100.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4100
+Hue: 240.
+Distance: 4110.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4110
+Hue: 245.
+Distance: 4120.
+Executing convert_to_color(245).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4120
+Hue: 264.
+Distance: 4130.
+Executing convert_to_color(264).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4130
+Hue: 296.
+Distance: 4140.
+Executing convert_to_color(296).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4140
+Hue: 314.
+Distance: 4150.
+Executing convert_to_color(314).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4150
+Hue: 337.
+Distance: 4160.
+Executing convert_to_color(337).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4160
+Hue: 343.
+Distance: 4170.
+Executing convert_to_color(343).
+Return: convert_to_color(): "purple"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 350.
+Distance: 4170.
+Executing convert_to_color(350).
+Return: convert_to_color(): "red"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 268.
+Distance: 4170.
+Executing convert_to_color(268).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4170
+Hue: 251.
+Distance: 4180.
+Executing convert_to_color(251).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4180
+Hue: 253.
+Distance: 4190.
+Executing convert_to_color(253).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4190
+Hue: 250.
+Distance: 4200.
+Executing convert_to_color(250).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4200
+Hue: 248.
+Distance: 4210.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4210
+Hue: 251.
+Distance: 4220.
+Executing convert_to_color(251).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4220
+Hue: 253.
+Distance: 4230.
+Executing convert_to_color(253).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4230
+Hue: 269.
+Distance: 4240.
+Executing convert_to_color(269).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4240
+Hue: 270.
+Distance: 4250.
+Executing convert_to_color(270).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4250
+Hue: 280.
+Distance: 4260.
+Executing convert_to_color(280).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4260
+Hue: 308.
+Distance: 4270.
+Executing convert_to_color(308).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4270
+Hue: 322.
+Distance: 4280.
+Executing convert_to_color(322).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4280
+Hue: 336.
+Distance: 4290.
+Executing convert_to_color(336).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4290
+Hue: 344.
+Distance: 4300.
+Executing convert_to_color(344).
+Return: convert_to_color(): "purple"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 339.
+Distance: 4300.
+Executing convert_to_color(339).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4300
+Hue: 337.
+Distance: 4310.
+Executing convert_to_color(337).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4310
+Hue: 331.
+Distance: 4320.
+Executing convert_to_color(331).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4320
+Hue: 328.
+Distance: 4330.
+Executing convert_to_color(328).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4330
+Hue: 328.
+Distance: 4340.
+Executing convert_to_color(328).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4340
+Hue: 336.
+Distance: 4350.
+Executing convert_to_color(336).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4350
+Hue: 337.
+Distance: 4360.
+Executing convert_to_color(337).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4360
+Hue: 334.
+Distance: 4370.
+Executing convert_to_color(334).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4370
+Hue: 334.
+Distance: 4380.
+Executing convert_to_color(334).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4380
+Hue: 340.
+Distance: 4390.
+Executing convert_to_color(340).
+Return: convert_to_color(): "purple"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 326.
+Distance: 4390.
+Executing convert_to_color(326).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4390
+Hue: 321.
+Distance: 4400.
+Executing convert_to_color(321).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4400
+Hue: 305.
+Distance: 4410.
+Executing convert_to_color(305).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4410
+Hue: 289.
+Distance: 4420.
+Executing convert_to_color(289).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4420
+Hue: 297.
+Distance: 4430.
+Executing convert_to_color(297).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4430
+Hue: 317.
+Distance: 4440.
+Executing convert_to_color(317).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4440
+Hue: 337.
+Distance: 4450.
+Executing convert_to_color(337).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4450
+Hue: 341.
+Distance: 4460.
+Executing convert_to_color(341).
+Return: convert_to_color(): "purple"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 296.
+Distance: 4460.
+Executing convert_to_color(296).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4460
+Hue: 286.
+Distance: 4470.
+Executing convert_to_color(286).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4470
+Hue: 269.
+Distance: 4480.
+Executing convert_to_color(269).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4480
+Hue: 262.
+Distance: 4490.
+Executing convert_to_color(262).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4490
+Hue: 250.
+Distance: 4500.
+Executing convert_to_color(250).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4500
+Hue: 248.
+Distance: 4510.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4510
+Hue: 250.
+Distance: 4520.
+Executing convert_to_color(250).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4520
+Hue: 249.
+Distance: 4530.
+Executing convert_to_color(249).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4530
+Hue: 248.
+Distance: 4540.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4540
+Hue: 251.
+Distance: 4550.
+Executing convert_to_color(251).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4550
+Hue: 256.
+Distance: 4560.
+Executing convert_to_color(256).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4560
+Hue: 257.
+Distance: 4570.
+Executing convert_to_color(257).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4570
+Hue: 261.
+Distance: 4580.
+Executing convert_to_color(261).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4580
+Hue: 258.
+Distance: 4590.
+Executing convert_to_color(258).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4590
+Hue: 262.
+Distance: 4600.
+Executing convert_to_color(262).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4600
+Hue: 278.
+Distance: 4610.
+Executing convert_to_color(278).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4610
+Hue: 291.
+Distance: 4620.
+Executing convert_to_color(291).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4620
+Hue: 304.
+Distance: 4630.
+Executing convert_to_color(304).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4630
+Hue: 327.
+Distance: 4640.
+Executing convert_to_color(327).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4640
+Hue: 337.
+Distance: 4650.
+Executing convert_to_color(337).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 4650
+Hue: 340.
+Distance: 4660.
+Executing convert_to_color(340).
+Return: convert_to_color(): "purple"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 283.
+Distance: 4660.
+Executing convert_to_color(283).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4660
+Hue: 282.
+Distance: 4670.
+Executing convert_to_color(282).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 4670
+Hue: 254.
+Distance: 4680.
+Executing convert_to_color(254).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4680
+Hue: 242.
+Distance: 4690.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4690
+Hue: 238.
+Distance: 4700.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4700
+Hue: 237.
+Distance: 4710.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4710
+Hue: 237.
+Distance: 4720.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4720
+Hue: 239.
+Distance: 4730.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4730
+Hue: 240.
+Distance: 4740.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4740
+Hue: 239.
+Distance: 4750.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4750
+Hue: 239.
+Distance: 4760.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4760
+Hue: 237.
+Distance: 4770.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4770
+Hue: 237.
+Distance: 4780.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4780
+Hue: 237.
+Distance: 4790.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4790
+Hue: 237.
+Distance: 4800.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4800
+Hue: 237.
+Distance: 4810.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4810
+Hue: 237.
+Distance: 4820.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4820
+Hue: 237.
+Distance: 4830.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4830
+Hue: 237.
+Distance: 4840.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4840
+Hue: 236.
+Distance: 4850.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4850
+Hue: 236.
+Distance: 4860.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4860
+Hue: 234.
+Distance: 4870.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4870
+Hue: 233.
+Distance: 4880.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4880
+Hue: 232.
+Distance: 4890.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4890
+Hue: 231.
+Distance: 4900.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4900
+Hue: 230.
+Distance: 4910.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4910
+Hue: 229.
+Distance: 4920.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4920
+Hue: 226.
+Distance: 4930.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4930
+Hue: 221.
+Distance: 4940.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4940
+Hue: 215.
+Distance: 4950.
+Executing convert_to_color(215).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4950
+Hue: 204.
+Distance: 4960.
+Executing convert_to_color(204).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4960
+Hue: 192.
+Distance: 4970.
+Executing convert_to_color(192).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 240.
+Distance: 4970.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4970
+Hue: 244.
+Distance: 4980.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4980
+Hue: 253.
+Distance: 4990.
+Executing convert_to_color(253).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 4990
+Hue: 261.
+Distance: 5000.
+Executing convert_to_color(261).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5000
+Hue: 266.
+Distance: 5010.
+Executing convert_to_color(266).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5010
+Hue: 265.
+Distance: 5020.
+Executing convert_to_color(265).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5020
+Hue: 265.
+Distance: 5030.
+Executing convert_to_color(265).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5030
+Hue: 266.
+Distance: 5040.
+Executing convert_to_color(266).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5040
+Hue: 266.
+Distance: 5050.
+Executing convert_to_color(266).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5050
+Hue: 262.
+Distance: 5060.
+Executing convert_to_color(262).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5060
+Hue: 264.
+Distance: 5070.
+Executing convert_to_color(264).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5070
+Hue: 262.
+Distance: 5080.
+Executing convert_to_color(262).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5080
+Hue: 261.
+Distance: 5090.
+Executing convert_to_color(261).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5090
+Hue: 258.
+Distance: 5100.
+Executing convert_to_color(258).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5100
+Hue: 250.
+Distance: 5110.
+Executing convert_to_color(250).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5110
+Hue: 248.
+Distance: 5120.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5120
+Hue: 245.
+Distance: 5130.
+Executing convert_to_color(245).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5130
+Hue: 243.
+Distance: 5140.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5140
+Hue: 242.
+Distance: 5150.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5150
+Hue: 239.
+Distance: 5160.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5160
+Hue: 239.
+Distance: 5170.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5170
+Hue: 238.
+Distance: 5180.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5180
+Hue: 237.
+Distance: 5190.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5190
+Hue: 236.
+Distance: 5200.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5200
+Hue: 235.
+Distance: 5210.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5210
+Hue: 234.
+Distance: 5220.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5220
+Hue: 234.
+Distance: 5230.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5230
+Hue: 233.
+Distance: 5240.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5240
+Hue: 231.
+Distance: 5250.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5250
+Hue: 230.
+Distance: 5260.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5260
+Hue: 226.
+Distance: 5270.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5270
+Hue: 222.
+Distance: 5280.
+Executing convert_to_color(222).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5280
+Hue: 207.
+Distance: 5290.
+Executing convert_to_color(207).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5290
+Hue: 171.
+Distance: 5300.
+Executing convert_to_color(171).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 5300.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5300
+Hue: 236.
+Distance: 5310.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5310
+Hue: 237.
+Distance: 5320.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5320
+Hue: 237.
+Distance: 5330.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5330
+Hue: 237.
+Distance: 5340.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5340
+Hue: 237.
+Distance: 5350.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5350
+Hue: 237.
+Distance: 5360.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5360
+Hue: 236.
+Distance: 5370.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5370
+Hue: 236.
+Distance: 5380.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5380
+Hue: 235.
+Distance: 5390.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5390
+Hue: 235.
+Distance: 5400.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5400
+Hue: 235.
+Distance: 5410.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5410
+Hue: 234.
+Distance: 5420.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5420
+Hue: 233.
+Distance: 5430.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5430
+Hue: 231.
+Distance: 5440.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5440
+Hue: 228.
+Distance: 5450.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5450
+Hue: 225.
+Distance: 5460.
+Executing convert_to_color(225).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5460
+Hue: 221.
+Distance: 5470.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5470
+Hue: 206.
+Distance: 5480.
+Executing convert_to_color(206).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5480
+Hue: 172.
+Distance: 5490.
+Executing convert_to_color(172).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 235.
+Distance: 5490.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5490
+Hue: 236.
+Distance: 5500.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5500
+Hue: 236.
+Distance: 5510.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5510
+Hue: 237.
+Distance: 5520.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5520
+Hue: 237.
+Distance: 5530.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5530
+Hue: 237.
+Distance: 5540.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5540
+Hue: 237.
+Distance: 5550.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5550
+Hue: 236.
+Distance: 5560.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5560
+Hue: 236.
+Distance: 5570.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5570
+Hue: 236.
+Distance: 5580.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5580
+Hue: 236.
+Distance: 5590.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5590
+Hue: 234.
+Distance: 5600.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5600
+Hue: 233.
+Distance: 5610.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5610
+Hue: 232.
+Distance: 5620.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5620
+Hue: 231.
+Distance: 5630.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5630
+Hue: 229.
+Distance: 5640.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5640
+Hue: 228.
+Distance: 5650.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5650
+Hue: 224.
+Distance: 5660.
+Executing convert_to_color(224).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5660
+Hue: 221.
+Distance: 5670.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5670
+Hue: 215.
+Distance: 5680.
+Executing convert_to_color(215).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5680
+Hue: 208.
+Distance: 5690.
+Executing convert_to_color(208).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5690
+Hue: 198.
+Distance: 5700.
+Executing convert_to_color(198).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 237.
+Distance: 5700.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5700
+Hue: 237.
+Distance: 5710.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5710
+Hue: 244.
+Distance: 5720.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5720
+Hue: 254.
+Distance: 5730.
+Executing convert_to_color(254).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 5730
+Hue: 270.
+Distance: 5740.
+Executing convert_to_color(270).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5740
+Hue: 272.
+Distance: 5750.
+Executing convert_to_color(272).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5750
+Hue: 272.
+Distance: 5760.
+Executing convert_to_color(272).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5760
+Hue: 273.
+Distance: 5770.
+Executing convert_to_color(273).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5770
+Hue: 275.
+Distance: 5780.
+Executing convert_to_color(275).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5780
+Hue: 279.
+Distance: 5790.
+Executing convert_to_color(279).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5790
+Hue: 285.
+Distance: 5800.
+Executing convert_to_color(285).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5800
+Hue: 290.
+Distance: 5810.
+Executing convert_to_color(290).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5810
+Hue: 294.
+Distance: 5820.
+Executing convert_to_color(294).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5820
+Hue: 296.
+Distance: 5830.
+Executing convert_to_color(296).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5830
+Hue: 296.
+Distance: 5840.
+Executing convert_to_color(296).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5840
+Hue: 301.
+Distance: 5850.
+Executing convert_to_color(301).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5850
+Hue: 303.
+Distance: 5860.
+Executing convert_to_color(303).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5860
+Hue: 308.
+Distance: 5870.
+Executing convert_to_color(308).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5870
+Hue: 312.
+Distance: 5880.
+Executing convert_to_color(312).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5880
+Hue: 313.
+Distance: 5890.
+Executing convert_to_color(313).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5890
+Hue: 314.
+Distance: 5900.
+Executing convert_to_color(314).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5900
+Hue: 313.
+Distance: 5910.
+Executing convert_to_color(313).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5910
+Hue: 314.
+Distance: 5920.
+Executing convert_to_color(314).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5920
+Hue: 315.
+Distance: 5930.
+Executing convert_to_color(315).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5930
+Hue: 310.
+Distance: 5940.
+Executing convert_to_color(310).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5940
+Hue: 306.
+Distance: 5950.
+Executing convert_to_color(306).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5950
+Hue: 303.
+Distance: 5960.
+Executing convert_to_color(303).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 5960
+Hue: 295.
+Distance: 5970.
+Executing convert_to_color(295).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5970
+Hue: 290.
+Distance: 5980.
+Executing convert_to_color(290).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5980
+Hue: 289.
+Distance: 5990.
+Executing convert_to_color(289).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 5990
+Hue: 285.
+Distance: 6000.
+Executing convert_to_color(285).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6000
+Hue: 284.
+Distance: 6010.
+Executing convert_to_color(284).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6010
+Hue: 282.
+Distance: 6020.
+Executing convert_to_color(282).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6020
+Hue: 281.
+Distance: 6030.
+Executing convert_to_color(281).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6030
+Hue: 274.
+Distance: 6040.
+Executing convert_to_color(274).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6040
+Hue: 266.
+Distance: 6050.
+Executing convert_to_color(266).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6050
+Hue: 263.
+Distance: 6060.
+Executing convert_to_color(263).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6060
+Hue: 258.
+Distance: 6070.
+Executing convert_to_color(258).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6070
+Hue: 255.
+Distance: 6080.
+Executing convert_to_color(255).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6080
+Hue: 253.
+Distance: 6090.
+Executing convert_to_color(253).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6090
+Hue: 248.
+Distance: 6100.
+Executing convert_to_color(248).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6100
+Hue: 247.
+Distance: 6110.
+Executing convert_to_color(247).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6110
+Hue: 244.
+Distance: 6120.
+Executing convert_to_color(244).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6120
+Hue: 242.
+Distance: 6130.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6130
+Hue: 240.
+Distance: 6140.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6140
+Hue: 238.
+Distance: 6150.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6150
+Hue: 237.
+Distance: 6160.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6160
+Hue: 236.
+Distance: 6170.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6170
+Hue: 235.
+Distance: 6180.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6180
+Hue: 234.
+Distance: 6190.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6190
+Hue: 232.
+Distance: 6200.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6200
+Hue: 227.
+Distance: 6210.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6210
+Hue: 221.
+Distance: 6220.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6220
+Hue: 209.
+Distance: 6230.
+Executing convert_to_color(209).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6230
+Hue: 176.
+Distance: 6240.
+Executing convert_to_color(176).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 235.
+Distance: 6240.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6240
+Hue: 236.
+Distance: 6250.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6250
+Hue: 237.
+Distance: 6260.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6260
+Hue: 238.
+Distance: 6270.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6270
+Hue: 237.
+Distance: 6280.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6280
+Hue: 236.
+Distance: 6290.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6290
+Hue: 236.
+Distance: 6300.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6300
+Hue: 234.
+Distance: 6310.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6310
+Hue: 222.
+Distance: 6320.
+Executing convert_to_color(222).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6320
+Hue: 81.
+Distance: 6330.
+Executing convert_to_color(81).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 69.
+Distance: 6330.
+Executing convert_to_color(69).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 65.
+Distance: 6330.
+Executing convert_to_color(65).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 73.
+Distance: 6330.
+Executing convert_to_color(73).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 75.
+Distance: 6330.
+Executing convert_to_color(75).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 75.
+Distance: 6330.
+Executing convert_to_color(75).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 77.
+Distance: 6330.
+Executing convert_to_color(77).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 96.
+Distance: 6330.
+Executing convert_to_color(96).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 230.
+Distance: 6330.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6330
+Hue: 232.
+Distance: 6340.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6340
+Hue: 219.
+Distance: 6350.
+Executing convert_to_color(219).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6350
+Hue: 214.
+Distance: 6360.
+Executing convert_to_color(214).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6360
+Hue: 101.
+Distance: 6370.
+Executing convert_to_color(101).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6370
+Hue: 80.
+Distance: 6380.
+Executing convert_to_color(80).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 76.
+Distance: 6380.
+Executing convert_to_color(76).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 76.
+Distance: 6380.
+Executing convert_to_color(76).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 150.
+Distance: 6380.
+Executing convert_to_color(150).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 6380.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6380
+Hue: 236.
+Distance: 6390.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6390
+Hue: 233.
+Distance: 6400.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6400
+Hue: 233.
+Distance: 6410.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6410
+Hue: 230.
+Distance: 6420.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6420
+Hue: 206.
+Distance: 6430.
+Executing convert_to_color(206).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6430
+Hue: 82.
+Distance: 6440.
+Executing convert_to_color(82).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 83.
+Distance: 6440.
+Executing convert_to_color(83).
+Return: convert_to_color(): "green"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 227.
+Distance: 6440.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6440
+Hue: 227.
+Distance: 6450.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6450
+Hue: 224.
+Distance: 6460.
+Executing convert_to_color(224).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6460
+Hue: 221.
+Distance: 6470.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6470
+Hue: 220.
+Distance: 6480.
+Executing convert_to_color(220).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6480
+Hue: 182.
+Distance: 6490.
+Executing convert_to_color(182).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 131.
+Distance: 6490.
+Executing convert_to_color(131).
+Return: convert_to_color(): "Unknown"
+Updating distance_travelled: 6490
+Hue: 164.
+Distance: 6500.
+Executing convert_to_color(164).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 233.
+Distance: 6500.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6500
+Hue: 233.
+Distance: 6510.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6510
+Hue: 233.
+Distance: 6520.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6520
+Hue: 233.
+Distance: 6530.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6530
+Hue: 233.
+Distance: 6540.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6540
+Hue: 225.
+Distance: 6550.
+Executing convert_to_color(225).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6550
+Hue: 156.
+Distance: 6560.
+Executing convert_to_color(156).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 229.
+Distance: 6560.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6560
+Hue: 230.
+Distance: 6570.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6570
+Hue: 233.
+Distance: 6580.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6580
+Hue: 234.
+Distance: 6590.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6590
+Hue: 233.
+Distance: 6600.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6600
+Hue: 228.
+Distance: 6610.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6610
+Hue: 221.
+Distance: 6620.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6620
+Hue: 175.
+Distance: 6630.
+Executing convert_to_color(175).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 230.
+Distance: 6630.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6630
+Hue: 233.
+Distance: 6640.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6640
+Hue: 234.
+Distance: 6650.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6650
+Hue: 236.
+Distance: 6660.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6660
+Hue: 236.
+Distance: 6670.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6670
+Hue: 234.
+Distance: 6680.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6680
+Hue: 233.
+Distance: 6690.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6690
+Hue: 228.
+Distance: 6700.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6700
+Hue: 223.
+Distance: 6710.
+Executing convert_to_color(223).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6710
+Hue: 199.
+Distance: 6720.
+Executing convert_to_color(199).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 233.
+Distance: 6720.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6720
+Hue: 234.
+Distance: 6730.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6730
+Hue: 234.
+Distance: 6740.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6740
+Hue: 235.
+Distance: 6750.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6750
+Hue: 236.
+Distance: 6760.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6760
+Hue: 235.
+Distance: 6770.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6770
+Hue: 233.
+Distance: 6780.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6780
+Hue: 232.
+Distance: 6790.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6790
+Hue: 230.
+Distance: 6800.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6800
+Hue: 223.
+Distance: 6810.
+Executing convert_to_color(223).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6810
+Hue: 216.
+Distance: 6820.
+Executing convert_to_color(216).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6820
+Hue: 194.
+Distance: 6830.
+Executing convert_to_color(194).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 235.
+Distance: 6830.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6830
+Hue: 236.
+Distance: 6840.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6840
+Hue: 237.
+Distance: 6850.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6850
+Hue: 238.
+Distance: 6860.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6860
+Hue: 240.
+Distance: 6870.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6870
+Hue: 239.
+Distance: 6880.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6880
+Hue: 239.
+Distance: 6890.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6890
+Hue: 239.
+Distance: 6900.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6900
+Hue: 238.
+Distance: 6910.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6910
+Hue: 238.
+Distance: 6920.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6920
+Hue: 237.
+Distance: 6930.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6930
+Hue: 237.
+Distance: 6940.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6940
+Hue: 237.
+Distance: 6950.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6950
+Hue: 235.
+Distance: 6960.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6960
+Hue: 235.
+Distance: 6970.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6970
+Hue: 233.
+Distance: 6980.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6980
+Hue: 233.
+Distance: 6990.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 6990
+Hue: 231.
+Distance: 7000.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7000
+Hue: 229.
+Distance: 7010.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7010
+Hue: 225.
+Distance: 7020.
+Executing convert_to_color(225).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7020
+Hue: 221.
+Distance: 7030.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7030
+Hue: 213.
+Distance: 7040.
+Executing convert_to_color(213).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7040
+Hue: 185.
+Distance: 7050.
+Executing convert_to_color(185).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 7050.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7050
+Hue: 237.
+Distance: 7060.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7060
+Hue: 239.
+Distance: 7070.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7070
+Hue: 241.
+Distance: 7080.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7080
+Hue: 243.
+Distance: 7090.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7090
+Hue: 242.
+Distance: 7100.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7100
+Hue: 242.
+Distance: 7110.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7110
+Hue: 241.
+Distance: 7120.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7120
+Hue: 240.
+Distance: 7130.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7130
+Hue: 239.
+Distance: 7140.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7140
+Hue: 238.
+Distance: 7150.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7150
+Hue: 237.
+Distance: 7160.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7160
+Hue: 236.
+Distance: 7170.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7170
+Hue: 236.
+Distance: 7180.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7180
+Hue: 235.
+Distance: 7190.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7190
+Hue: 233.
+Distance: 7200.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7200
+Hue: 232.
+Distance: 7210.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7210
+Hue: 230.
+Distance: 7220.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7220
+Hue: 229.
+Distance: 7230.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7230
+Hue: 222.
+Distance: 7240.
+Executing convert_to_color(222).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7240
+Hue: 216.
+Distance: 7250.
+Executing convert_to_color(216).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7250
+Hue: 209.
+Distance: 7260.
+Executing convert_to_color(209).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7260
+Hue: 188.
+Distance: 7270.
+Executing convert_to_color(188).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 236.
+Distance: 7270.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7270
+Hue: 237.
+Distance: 7280.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7280
+Hue: 240.
+Distance: 7290.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7290
+Hue: 242.
+Distance: 7300.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7300
+Hue: 243.
+Distance: 7310.
+Executing convert_to_color(243).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7310
+Hue: 240.
+Distance: 7320.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7320
+Hue: 238.
+Distance: 7330.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7330
+Hue: 237.
+Distance: 7340.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7340
+Hue: 236.
+Distance: 7350.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7350
+Hue: 235.
+Distance: 7360.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7360
+Hue: 234.
+Distance: 7370.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7370
+Hue: 233.
+Distance: 7380.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7380
+Hue: 232.
+Distance: 7390.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7390
+Hue: 229.
+Distance: 7400.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7400
+Hue: 221.
+Distance: 7410.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7410
+Hue: 212.
+Distance: 7420.
+Executing convert_to_color(212).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7420
+Hue: 181.
+Distance: 7430.
+Executing convert_to_color(181).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 235.
+Distance: 7430.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7430
+Hue: 236.
+Distance: 7440.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7440
+Hue: 237.
+Distance: 7450.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7450
+Hue: 238.
+Distance: 7460.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7460
+Hue: 238.
+Distance: 7470.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7470
+Hue: 237.
+Distance: 7480.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7480
+Hue: 237.
+Distance: 7490.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7490
+Hue: 237.
+Distance: 7500.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7500
+Hue: 236.
+Distance: 7510.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7510
+Hue: 236.
+Distance: 7520.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7520
+Hue: 235.
+Distance: 7530.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7530
+Hue: 234.
+Distance: 7540.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7540
+Hue: 233.
+Distance: 7550.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7550
+Hue: 232.
+Distance: 7560.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7560
+Hue: 229.
+Distance: 7570.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7570
+Hue: 226.
+Distance: 7580.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7580
+Hue: 219.
+Distance: 7590.
+Executing convert_to_color(219).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7590
+Hue: 193.
+Distance: 7600.
+Executing convert_to_color(193).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 235.
+Distance: 7600.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7600
+Hue: 236.
+Distance: 7610.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7610
+Hue: 237.
+Distance: 7620.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7620
+Hue: 239.
+Distance: 7630.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7630
+Hue: 241.
+Distance: 7640.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7640
+Hue: 240.
+Distance: 7650.
+Executing convert_to_color(240).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7650
+Hue: 239.
+Distance: 7660.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7660
+Hue: 238.
+Distance: 7670.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7670
+Hue: 238.
+Distance: 7680.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7680
+Hue: 236.
+Distance: 7690.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7690
+Hue: 236.
+Distance: 7700.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7700
+Hue: 235.
+Distance: 7710.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7710
+Hue: 234.
+Distance: 7720.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7720
+Hue: 233.
+Distance: 7730.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7730
+Hue: 232.
+Distance: 7740.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7740
+Hue: 229.
+Distance: 7750.
+Executing convert_to_color(229).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7750
+Hue: 227.
+Distance: 7760.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7760
+Hue: 225.
+Distance: 7770.
+Executing convert_to_color(225).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7770
+Hue: 214.
+Distance: 7780.
+Executing convert_to_color(214).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7780
+Hue: 190.
+Distance: 7790.
+Executing convert_to_color(190).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 233.
+Distance: 7790.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7790
+Hue: 234.
+Distance: 7800.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7800
+Hue: 235.
+Distance: 7810.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7810
+Hue: 236.
+Distance: 7820.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7820
+Hue: 237.
+Distance: 7830.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7830
+Hue: 237.
+Distance: 7840.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7840
+Hue: 236.
+Distance: 7850.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7850
+Hue: 235.
+Distance: 7860.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7860
+Hue: 235.
+Distance: 7870.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7870
+Hue: 234.
+Distance: 7880.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7880
+Hue: 233.
+Distance: 7890.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7890
+Hue: 232.
+Distance: 7900.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7900
+Hue: 231.
+Distance: 7910.
+Executing convert_to_color(231).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7910
+Hue: 227.
+Distance: 7920.
+Executing convert_to_color(227).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7920
+Hue: 222.
+Distance: 7930.
+Executing convert_to_color(222).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7930
+Hue: 211.
+Distance: 7940.
+Executing convert_to_color(211).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7940
+Hue: 185.
+Distance: 7950.
+Executing convert_to_color(185).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 232.
+Distance: 7950.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7950
+Hue: 233.
+Distance: 7960.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7960
+Hue: 234.
+Distance: 7970.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7970
+Hue: 235.
+Distance: 7980.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7980
+Hue: 235.
+Distance: 7990.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 7990
+Hue: 234.
+Distance: 8000.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8000
+Hue: 233.
+Distance: 8010.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8010
+Hue: 230.
+Distance: 8020.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8020
+Hue: 228.
+Distance: 8030.
+Executing convert_to_color(228).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8030
+Hue: 221.
+Distance: 8040.
+Executing convert_to_color(221).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8040
+Hue: 203.
+Distance: 8050.
+Executing convert_to_color(203).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8050
+Hue: 185.
+Distance: 8060.
+Executing convert_to_color(185).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 233.
+Distance: 8060.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8060
+Hue: 234.
+Distance: 8070.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8070
+Hue: 234.
+Distance: 8080.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8080
+Hue: 235.
+Distance: 8090.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8090
+Hue: 235.
+Distance: 8100.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8100
+Hue: 235.
+Distance: 8110.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8110
+Hue: 234.
+Distance: 8120.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8120
+Hue: 234.
+Distance: 8130.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8130
+Hue: 234.
+Distance: 8140.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8140
+Hue: 233.
+Distance: 8150.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8150
+Hue: 232.
+Distance: 8160.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8160
+Hue: 230.
+Distance: 8170.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8170
+Hue: 226.
+Distance: 8180.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8180
+Hue: 223.
+Distance: 8190.
+Executing convert_to_color(223).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8190
+Hue: 216.
+Distance: 8200.
+Executing convert_to_color(216).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8200
+Hue: 204.
+Distance: 8210.
+Executing convert_to_color(204).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8210
+Hue: 187.
+Distance: 8220.
+Executing convert_to_color(187).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 235.
+Distance: 8220.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8220
+Hue: 235.
+Distance: 8230.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8230
+Hue: 237.
+Distance: 8240.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8240
+Hue: 238.
+Distance: 8250.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8250
+Hue: 239.
+Distance: 8260.
+Executing convert_to_color(239).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8260
+Hue: 238.
+Distance: 8270.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8270
+Hue: 238.
+Distance: 8280.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8280
+Hue: 237.
+Distance: 8290.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8290
+Hue: 236.
+Distance: 8300.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8300
+Hue: 236.
+Distance: 8310.
+Executing convert_to_color(236).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8310
+Hue: 235.
+Distance: 8320.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8320
+Hue: 234.
+Distance: 8330.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8330
+Hue: 234.
+Distance: 8340.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8340
+Hue: 233.
+Distance: 8350.
+Executing convert_to_color(233).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8350
+Hue: 232.
+Distance: 8360.
+Executing convert_to_color(232).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8360
+Hue: 230.
+Distance: 8370.
+Executing convert_to_color(230).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8370
+Hue: 226.
+Distance: 8380.
+Executing convert_to_color(226).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8380
+Hue: 211.
+Distance: 8390.
+Executing convert_to_color(211).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8390
+Hue: 192.
+Distance: 8400.
+Executing convert_to_color(192).
+Return: convert_to_color(): "teal"
+Executing offtrack_right().
+Return: offtrack_right(): None
+Hue: 234.
+Distance: 8400.
+Executing convert_to_color(234).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8400
+Hue: 235.
+Distance: 8410.
+Executing convert_to_color(235).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8410
+Hue: 237.
+Distance: 8420.
+Executing convert_to_color(237).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8420
+Hue: 238.
+Distance: 8430.
+Executing convert_to_color(238).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8430
+Hue: 241.
+Distance: 8440.
+Executing convert_to_color(241).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8440
+Hue: 242.
+Distance: 8450.
+Executing convert_to_color(242).
+Return: convert_to_color(): "blue"
+Updating distance_travelled: 8450
+Hue: 303.
+Distance: 8460.
+Executing convert_to_color(303).
+Return: convert_to_color(): "blue-black"
+Updating distance_travelled: 8460
+Hue: 344.
+Distance: 8470.
+Executing convert_to_color(344).
+Return: convert_to_color(): "purple"
+Executing offtack_left().
+Return: offtrack_left(): None
+Hue: 0.
+Distance: 8470.
+Executing convert_to_color(0).
+Return: convert_to_color(): "black"
+Executing offtrack_gap_2().
+Executing convert_to_color(13).
+Return: convert_to_color(): "black"
+Executing convert_to_color(12).
+Return: convert_to_color(): "black"
+Executing convert_to_color(12).
+Return: convert_to_color(): "black"
+Executing convert_to_color(12).
+Return: convert_to_color(): "black"
+Executing convert_to_color(12).
+Return: convert_to_color(): "black"
+Executing convert_to_color(12).
+Return: convert_to_color(): "black"
+Executing convert_to_color(11).
+Return: convert_to_color(): "black"
+Executing convert_to_color(10).
+Return: convert_to_color(): "black"
+Executing convert_to_color(11).
+Return: convert_to_color(): "black"
+Executing convert_to_color(11).
+Return: convert_to_color(): "black"
+Executing convert_to_color(11).
+Return: convert_to_color(): "black"
+Executing convert_to_color(11).
+Return: convert_to_color(): "black"
+Executing convert_to_color(12).
+Return: convert_to_color(): "black"
+Executing convert_to_color(10).
+Return: convert_to_color(): "black"
+Executing convert_to_color(9).
+Return: convert_to_color(): "black"
+Executing convert_to_color(10).
+Return: convert_to_color(): "black"
+Executing convert_to_color(11).
+Return: convert_to_color(): "black"
+Executing convert_to_color(11).
+Return: convert_to_color(): "black"
+Executing convert_to_color(11).

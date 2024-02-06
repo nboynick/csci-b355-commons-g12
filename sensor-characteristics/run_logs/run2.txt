@@ -1,0 +1,1228 @@
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue-black
+blue-black
+blue-black
+blue-black
+purple
+Executing offtack_left().
+blue-black
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue-black
+blue-black
+blue-black
+blue-black
+purple
+Executing offtack_left().
+purple
+Executing offtack_left().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue-black
+blue-black
+purple
+Executing offtack_left().
+red
+Executing offtack_left().
+blue-black
+blue-black
+blue-black
+blue
+blue-black
+blue-black
+blue-black
+purple
+Executing offtack_left().
+purple
+Executing offtack_left().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue-black
+purple
+Executing offtack_left().
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+purple
+Executing offtack_left().
+blue-black
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+red
+Executing offtack_left().
+black
+Executing turn_right().
+black
+red
+red
+red
+red
+blue
+blue
+blue
+blue
+blue
+blue-black
+red
+Executing offtack_left().
+red
+Executing offtack_left().
+blue-black
+blue-black
+blue-black
+blue-black
+purple
+Executing offtack_left().
+blue-black
+blue-black
+blue-black
+blue-black
+blue
+blue
+blue-black
+blue-black
+blue-black
+purple
+Executing offtack_left().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue-black
+blue
+blue
+blue-black
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+green
+Executing offtrack_right().
+green
+Executing offtrack_right().
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+teal
+Executing offtrack_right().
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+blue
+black
+old-distance: 12555
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+new-distance: 13635
+black
+old-distance: 13635
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+black
+
+MicroPython v1.13-319-gbcc02a951-dirty on 2023-01-16; Vex EXP with Cortex M7
+Type "help()" for more information.
+>>> teal
+Executing offtrack_right().
