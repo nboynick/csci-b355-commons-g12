@@ -9,6 +9,7 @@
   because the API is incorrectly defined.
 - The brightness() function returns its values as a percentage in the range of (0,100).
 - The object_detected() method does not seem to work as long as the scopes are attached to it.
+- Has a light for better color recognition that has to be turned on.
 
 ## Servo
 - set_position() is non blocking, i.e., you have to run a wait() afterwords for however long it will
