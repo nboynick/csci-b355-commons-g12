@@ -1221,8 +1221,3 @@ black
 black
 black
 black
-
-MicroPython v1.13-319-gbcc02a951-dirty on 2023-01-16; Vex EXP with Cortex M7
-Type "help()" for more information.
->>> teal
-Executing offtrack_right().

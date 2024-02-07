@@ -1,7 +1,4 @@
-
-MicroPython v1.13-319-gbcc02a951-dirty on 2023-01-16; Vex EXP with Cortex M7
-Type "help()" for more information.
->>> unknown: 266
+unknown: 266
 blue
 blue
 blue
