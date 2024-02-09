@@ -161,3 +161,6 @@ cython_debug/
 
 # MAC OS system files
 .DS_Store
+
+# cspell config file
+cspell.json
