@@ -121,6 +121,10 @@ def init():
     # Brain Timer Restart
     brain.timer.clear()
 
+    # Drivetrain Speeds
+    drivetrain.set_drive_velocity(40, PERCENT)
+    drivetrain.set_turn_velocity(30, PERCENT)
+
 
 
 def heading_aligned():
@@ -141,21 +145,73 @@ def heading_aligned():
 
 
 
+def modify_theo_head(direction):
+    # Import global variables into the local scope
+    global theo_head
+
+    # Figure out by in which direction the value needs to be modified
+    if direction == "r":
+        modification_value = 90
+    elif direction == "l":
+        modification_Value = (-90)
+    else:
+        print("Error in modify_theo_head: direction=" + str(direction) + ":::")
+
+    # Check if the global variable will have rollover and thus modify it
+    # This is (unnecessarily) complex due to the theo_head variable also being used in the other thread
+    #   --> thread safety issues if it is not modified in one single step
+    if theo_head + modification_value > 360:
+        theo_head += (modification_value - 360)
+    elif theo_head + modification_value < 0:
+        theo_head += (modification_value + 360)
+    else:
+        theo_head += modification_value
+
+
+
+def update_drivetrain():
+    # Import global variables into the local scope
+    global theo_head
+    global stabilize
+
+    # Prevent the stabilization thread from running
+    stabilize = False
+
+    # Update the drivetrain
+    drivetrain.stop()
+    drivetrain.turn_to_heading(theo_head, DEGREES)
+    drivetrain.drive(FORWARD)
+
+    # Restart the stabilization thread
+    stabilize = True
+
+
+
 def turn_right_after_bump():
-    # TODO
-    pass
+    # Back away from the corner to give ourselves turning space
+    drivetrain.stop()
+    drivetrain.drive_for(REVERSE, 51, MM)
+
+    # Call the turn right function
+    turn_right()
 
 
 
 def turn_right():
-    # TODO
-    pass
+    # Modify the theoretical heading
+    modify_theo_head("r")
+
+    # Update the drivetrain to recognize the changes
+    update_drivetrain()
 
 
 
 def turn_left():
-    # TODO
-    pass
+    # Modify the theoretical heading
+    modify_theo_head("l")
+
+    # Update the drivetrain to recognize the changes
+    update_drivetrain()
 
 
 
@@ -172,7 +228,7 @@ def correct_heading():
             # Perform the re-alignment
             drivetrain.stop()
             drivetrain.turn_to_heading(theo_head, DEGREES, wait=True)
-            drivetrain.drive(FORWARD)
+            drivetrain.drive(FORWARD) # Potential issue
 
             # Postpone future alignment at least 1 second (prevent constant re-alignment)
             pre_wait_time = round(brain.timer.time(SECONDS), 3)
