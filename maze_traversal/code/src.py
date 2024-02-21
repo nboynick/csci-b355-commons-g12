@@ -200,8 +200,8 @@ def main():
         new_dist = int(distance_8.object_distance(MM))
 
         # Compare base dist to new dist (the absolute numbers are a buffer region due to inacurate walls)
-        left_wall_fallaway = new_dist > (base_wall_dist + 5)
-        center_wall_approach = new_dist < (base_wall_dist - 2)
+        left_wall_fallaway = new_dist > (base_wall_dist + 127) # 5in
+        center_wall_approach = new_dist < (base_wall_dist - 51) # 2in
         bumping_into_wall = limit_switch_b.pressing() or limit_switch_c.pressing()
 
         # Error case if dist is max (9999)
