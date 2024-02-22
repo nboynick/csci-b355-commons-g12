@@ -1,0 +1,76 @@
+
+MicroPython v1.13-319-gbcc02a951-dirty on 2023-01-16; Vex EXP with Cortex M7
+Type "help()" for more information.
+>>> bumper reset  False  False
+bumper reset  False  False
+alignment
+bumper reset  False  False
+bumper reset  False  False
+b
+bumper reset  False  False
+bumper reset  False  False
+bumper reset  False  False
+alignment
+bumper reset  False  False
+b
+bumper reset  False  False
+bumper reset  False  False
+alignment
+bumper reset  False  False
+alignment
+bumper reset  False  False
+alignment
+bumper reset  False  False
+b
+bumper reset  True  True
+alignment
+bumper reset  False  False
+alignment
+a
+bumper reset  True  True
+bumper reset  False  False
+bumper reset  False  False
+b
+bumper reset  False  False
+b
+alignment
+bumper reset  True  True
+bumper reset  False  False
+alignment
+bumper reset  False  False
+bumper reset  False  False
+bumper reset  False  False
+bumper reset  False  False
+a
+bumper reset  True  False
+bumper reset  False  False
+b
+bumper reset  False  False
+bumper reset  True  True
+b
+alignment
+bumper reset  True  False
+bumper reset  False  False
+a
+bumper reset  True  True
+alignment
+bumper reset  False  False
+b
+bumper reset  False  False
+bumper reset  False  False
+a
+alignment
+bumper reset  True  True
+bumper reset  False  False
+b
+bumper reset  False  False
+a
+bumper reset  True  True
+alignment
+bumper reset  False  False
+b
+bumper reset  False  False
+a
+bumper reset  True  True
+alignment
+bumper reset  False  False

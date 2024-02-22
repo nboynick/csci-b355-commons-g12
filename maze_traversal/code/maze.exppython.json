@@ -1,6 +1,6 @@
 {
     "mode": "Text",
-    "textContent": "# COPY CODE FROM src.py INTO THIS FILE\n",
+    "textContent": "# FULLY EMPTY THIS FILE, THEN COPY CODE FROM src.py HERE\n",
     "textLanguage": "python",
     "rconfig": [
         {

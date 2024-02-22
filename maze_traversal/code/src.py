@@ -1,4 +1,3 @@
-
 #region VEXcode Generated Robot Configuration
 from vex import *
 import urandom
@@ -54,11 +53,18 @@ import math
 
 
 
+# CONSTANTS #######################################################################################
+OPTICAL_ANGLE = 40
+
+
 # GLOBAL VARIABLES ##############################################################################################
 base_wall_dist = -1 # base wall distance in MM
 theo_head = 0       # current base heading in degrees (one of the four cardinal directions)
 stabilize = True    # toggle for the separate stabilization thread
 # pre_stab_time = 0   # brain clock value the last time the stabilization code was run
+right_bump_on = False
+left_bump_on = False
+init_finished = False
 
 
 
@@ -78,7 +84,7 @@ def print_debug(func_name, new_wall_dist):
     string += ":::"
 
     # Print the debug string
-    print(string)
+    # print(string)
 
     # Wait to ensure that the string has been cleared out of the buffer
     wait(20, MSEC)
@@ -104,29 +110,6 @@ def incorrect_state_wall_and_bump():
 
 
 # HELPER METHODS ############################################################################################
-def init():
-    # Drivetrain
-    calibrate_drivetrain()
-
-    # Heading Stabilization
-    heading_correction_thread = Event()
-    heading_correction_thread(correct_heading)
-    wait(15, MSEC)
-    heading_correction_thread.broadcast()
-
-    # Servo Adjust
-    servo_a.set_position(-50, DEGREES)
-    wait(600, MSEC)
-
-    # Brain Timer Restart
-    brain.timer.clear()
-
-    # Drivetrain Speeds
-    drivetrain.set_drive_velocity(40, PERCENT)
-    drivetrain.set_turn_velocity(30, PERCENT)
-
-
-
 def heading_aligned():
     # Import global variables into the local scope
     global theo_head
@@ -153,7 +136,7 @@ def modify_theo_head(direction):
     if direction == "r":
         modification_value = 90
     elif direction == "l":
-        modification_Value = (-90)
+        modification_value = (-90)
     else:
         print("Error in modify_theo_head: direction=" + str(direction) + ":::")
 
@@ -173,6 +156,8 @@ def update_drivetrain():
     # Import global variables into the local scope
     global theo_head
     global stabilize
+
+    print("b")
 
     # Prevent the stabilization thread from running
     stabilize = False
@@ -206,12 +191,86 @@ def turn_right():
 
 
 
-def turn_left():
+def clear_wall():
+    pass
+
+
+
+def turn_left(wall_dist):
     # Modify the theoretical heading
     modify_theo_head("l")
 
+    clearance = wall_dist * (math.cos(math.radians(50)))
+    clearance += 280
+    drivetrain.stop()
+    drivetrain.drive_for(FORWARD, clearance, MM)
+
     # Update the drivetrain to recognize the changes
     update_drivetrain()
+
+
+
+def register_right_bump():
+    global right_bump_on
+    right_bump_on = True
+
+def register_left_bump():
+    global left_bump_on
+    left_bump_on = True
+
+
+
+def add_left_wall_buffer():
+    global stabilize
+    stabilize = False
+    print("a")
+    drivetrain.drive_for(REVERSE, 250, MM)
+    drivetrain.turn_for(RIGHT, 7, DEGREES, wait=True)
+    drivetrain.drive_for(FORWARD, 200, MM)
+    update_drivetrain()
+
+
+
+def init():
+    # Import global variabels into the local scope
+    global init_finished
+
+    # Drivetrain
+    calibrate_drivetrain()
+
+    # Heading Stabilization
+    heading_correction_thread = Event()
+    heading_correction_thread(correct_heading)
+    wait(15, MSEC)
+    heading_correction_thread.broadcast()
+
+    # Servo Adjust
+    servo_a.set_position(-50, DEGREES)
+    wait(600, MSEC)
+
+    # Brain Timer Restart
+    brain.timer.clear()
+
+    # Drivetrain Speeds
+    drivetrain.set_drive_velocity(40, PERCENT)
+    drivetrain.set_turn_velocity(30, PERCENT)
+
+    # Setup the limit switch callbacks
+    limit_switch_b.pressed(register_left_bump)
+    limit_switch_c.pressed(register_right_bump)
+    bumper_reset_thread = Event()
+    bumper_reset_thread(reset_bumper_switches)
+    wait(15, MSEC)
+    bumper_reset_thread.broadcast()
+
+    # Wait until log output is ready
+    wait(1, SECONDS)
+    brain.screen.clear_row(1)
+    brain.screen.set_cursor(1,1)
+    brain.screen.print("Here")
+
+    # Commence the other threads
+    init_finished = True
 
 
 
@@ -221,6 +280,10 @@ def correct_heading():
     global stabilize
     # global pre_stab_time
     global theo_head
+    global init_finished
+
+    while not init_finished:
+        wait(200, MSEC)
 
     # Continuousely check if new alignment should be performed
     while True:
@@ -236,9 +299,27 @@ def correct_heading():
             post_wait_time = round(brain.timer.time(SECONDS), 3)
 
             # Debug statement
+            print("alignment")
             # If this debug is not giving back ~1 second separated times, then we will have to go back to
             #   checking for the time as part of one of the conditional statements instead of a wait fn call
-            print("A  Pre:" + str(pre_wait_time) + "  Post:" + str(post_wait_time) + ":::")
+            # print("A  Pre:" + str(pre_wait_time) + "  Post:" + str(post_wait_time) + ":::")
+
+
+
+def reset_bumper_switches():
+    global init_finished
+
+    while not init_finished:
+        wait(200, MSEC)
+
+    global right_bump_on
+    global left_bump_on
+    while True:
+        print("bumper reset  " + str(left_bump_on) + "  " + str(right_bump_on))
+        right_bump_on = False
+        left_bump_on = False
+        wait(1000, MSEC)
+
 
 
 
@@ -251,6 +332,10 @@ def main():
     global theo_head
     # global stabilize
 
+
+    base_wall_dist = distance_8.object_distance()
+    drivetrain.drive(FORWARD)
+
     while True:
         # Obtain the current distance sensor measurement
         new_dist = int(distance_8.object_distance(MM))
@@ -258,11 +343,11 @@ def main():
         # Compare base dist to new dist (the absolute numbers are a buffer region due to inacurate walls)
         left_wall_fallaway = new_dist > (base_wall_dist + 127) # 5in
         center_wall_approach = new_dist < (base_wall_dist - 51) # 2in
-        bumping_into_wall = limit_switch_b.pressing() or limit_switch_c.pressing()
+        # bumping_into_wall = limit_switch_b.pressing() or limit_switch_c.pressing()
+        bumping_into_wall = right_bump_on and left_bump_on
 
-        # Error case if dist is max (9999)
-        if new_dist > 2500: # distance over 2.5 meters
-            distance_out_of_range()
+        if left_bump_on and not right_bump_on:
+            add_left_wall_buffer()
 
         # Error if left wall gap but also limit swtich pressing
         if left_wall_fallaway and bumping_into_wall:
@@ -277,10 +362,10 @@ def main():
             turn_right_after_bump()
         elif left_wall_fallaway:
             print_debug("Left", new_dist)
-            turn_left()
-        elif center_wall_approach:
-            print_debug("Right", new_dist)
-            turn_right()
+            turn_left(base_wall_dist)
+        # elif center_wall_approach:
+        #     print_debug("Right", new_dist)
+        #     turn_right()
         else:
             resync_new_distance = False
 
