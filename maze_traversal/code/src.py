@@ -19,8 +19,8 @@ limit_switch_right = Limit(brain.three_wire_port.c)
 servo_distance = Servo(brain.three_wire_port.a)
 distance_8 = Distance(Ports.PORT8)
 orientation_f = PotentiometerV2(brain.three_wire_port.f)
-bumper_front = Bumper(brain.three_wire_port.d)
-bumper_rear = Bumper(brain.three_wire_port.e)
+bumper_front_right = Bumper(brain.three_wire_port.d)
+bumper_front_left = Bumper(brain.three_wire_port.e)
 optical_2 = Optical(Ports.PORT2)
 
 
@@ -30,9 +30,14 @@ wait(100, MSEC)
 def calibrate_drivetrain():
     # Calibrate the Drivetrain Inertial
     sleep(200, MSEC)
+    brain.screen.print("Calibrating")
+    brain.screen.next_row()
+    brain.screen.print("Inertial")
     brain_inertial.calibrate()
     while brain_inertial.is_calibrating():
         sleep(25, MSEC)
+    brain.screen.clear_screen()
+    brain.screen.set_cursor(1, 1)
 
 #endregion VEXcode Generated Robot Configuration
 # ------------------------------------------
@@ -53,10 +58,11 @@ import math
 
 
 # CONSTANTS ########################################################################################
-ROBOT_LENGTH = 280  # in MM
+ROBOT_LENGTH = 170  # in MM
 DISTANCE_SENSOR_SERVO_POSITION = -50
 DRIVETRAIN_DRIVE_SPEED = 40
 DRIVETRAIN_TURN_SPEED = 30
+PRINTING_TIMEOUT = 60  # timeout used between print calls in miliseconds
 
 
 
@@ -72,11 +78,19 @@ current_theoretical_heading = 0  # in degrees
 
 # DEBUGGING ########################################################################################
 def my_print(input_string):
+    # Import global constants into the local scope
+    global PRINTING_TIMEOUT
+
+    # Add a timestamp to the output
     current_time = brain.timer.time(SECONDS)
-    current_time = round(current_time, 3)
+    current_time = round(current_time, 2)
     output_string = str(current_time) + "--" + input_string + "---"
+
+    # Print the string
     print(output_string)
-    wait(50, MSEC)
+
+    # Wait/Timeout to prevent output tearing/incomleteness
+    wait(PRINTING_TIMEOUT, MSEC)
 
 
 
@@ -101,8 +115,8 @@ def init():
     drivetrain.set_turn_velocity(DRIVETRAIN_TURN_SPEED, PERCENT)
 
     # Position distance sensor's servo
-    servo_distance.set_position(DISTANCE_SENSOR_SERVO_POSITION)
-    wait(650, MSEC)
+    # servo_distance.set_position(DISTANCE_SENSOR_SERVO_POSITION)
+    # wait(650, MSEC)
 
     # Initialize separte thread/callback for drive direction/heading alignment
     #  (alignment still turned off at this point)
@@ -177,6 +191,10 @@ def set_current_theoretical_heading(direction):
 
 
 def prevent_wall_rubbing(side):
+    # Local variables used for code manipulation (i.e., fine tuning)
+    backtrack_distance = 250  # in MM
+    evasion_angle = 7  # in degrees
+
     # Import global variables into the local scope
     global heading_stabilization_on
 
@@ -186,15 +204,21 @@ def prevent_wall_rubbing(side):
     # Prevent heading stabilization during the turn
     heading_stabilization_on = False
 
-    # Drive backwards, rotate slightly, drive forwards a bit (to give buffer to the wall), realign with original heading
-    drivetrain.drive_for(REVERSE, 200, MM)
+    # Choose turn direction
     if side == "left":
-        drivetrain.turn_for(RIGHT, 5, DEGREES)
+        evasion_direction = RIGHT
     elif side == "right":
-        drivetrain.turn_for(LEFT, 5, DEGREES)
+        evasion_direction = LEFT
     else:
         my_print("prevent_wall_rubbing:bad side argument=" + str(side))
-    drivetrain.drive_for(FORWARD, 200, MM)
+
+    # Calculate evasion distance
+    evasion_distance = backtrack_distance * math.cos(math.radians(abs(evasion_angle)))
+
+    # Drive backwards, rotate slightly, drive forwards a bit (to give buffer to the wall), realign with original heading
+    drivetrain.drive_for(REVERSE, backtrack_distance, MM)
+    drivetrain.turn_for(evasion_direction, evasion_angle, DEGREES)
+    drivetrain.drive_for(FORWARD, evasion_distance, MM)
     correct_heading()
 
     # Re-enable heading stabilization after finishing the turn
@@ -213,7 +237,7 @@ def turn_right():
     heading_stabilization_on = False
 
     # Drive backwards to avoid the wall
-    drivetrain.drive_for(REVERSE, 75, MM)
+    drivetrain.drive_for(REVERSE, 90, MM)
 
     # Modify the theoretical heading
     set_current_theoretical_heading("right")
@@ -239,8 +263,8 @@ def turn_left(wall_distance):
     heading_stabilization_on = False
 
     # Drive forwards to avoid the wall
-    wall_clearance_distance = wall_distance * (math.cos(math.radians(abs(DISTANCE_SENSOR_SERVO_POSITION))))
-    wall_clearance_distance += ROBOT_LENGTH
+    # wall_clearance_distance = wall_distance * (math.cos(math.radians(abs(DISTANCE_SENSOR_SERVO_POSITION))))
+    wall_clearance_distance = ROBOT_LENGTH
     drivetrain.drive_for(FORWARD, wall_clearance_distance, MM)
 
     # Modify the theoretical heading
@@ -248,6 +272,21 @@ def turn_left(wall_distance):
 
     # Make the turn (update the robots position to reflect the change in theoretical heading)
     correct_heading()
+
+    # Move forward to make distance sensor see the new wall
+    if wall_distance < 80:
+        move_forward_distance = wall_distance
+    else:
+        move_forward_distance = 80
+    move_forward_distance += 75
+    drivetrain.drive_for(FORWARD, move_forward_distance, MM)
+
+    output_string = "------\n"
+    output_string += "wall_dist:" + str(wall_distance) + "\n"
+    output_string += "wall clear dist:" + str(wall_clearance_distance) + "\n"
+    output_string += "move forw dist:" + str(move_forward_distance) + "\n"
+    output_string += "-----\n"
+    my_print(output_string)
 
     # Re-enable heading stabilization after finishing the turn
     heading_stabilization_on = True
@@ -271,12 +310,13 @@ def check_heading_alignment():
             if not heading_aligned_result:
                 # Realign the heading (if needed)
                 correct_heading()
-                # Prevent heading from being realigned more than once every <2> seconds
-                wait(2, SECONDS)
 
                 # Debugging statement
                 string_output = "cha:hso=" + str(heading_stabilization_on) + ":iha=" + str(heading_aligned_result)
                 my_print(string_output)
+
+                # Prevent heading from being realigned more than once every <2> seconds
+                wait(2, SECONDS)
 
 
 
@@ -291,34 +331,43 @@ def main():
 
     # Create main game loop
     while True:
+        # Test loop time - Part 1/2
+        # start_time = brain.timer.time(SECONDS)
+
         # Get sensor input
-        current_wall_distance = distance_8.object_distance(MM)
-        front_bumper_pressing = bumper_front.pressing()
-        rear_bumper_pressing = bumper_rear.pressing()
+        current_wall_distance = int(distance_8.object_distance(MM))
+        front_left_bumper_pressing = bumper_front_left.pressing()
+        front_right_bumper_pressing = bumper_front_right.pressing()
         limit_left_pressing = limit_switch_left.pressing()
         limit_right_pressing = limit_switch_right.pressing()
         # optical input???
 
         # Parse sensor input
         distance_increased = current_wall_distance > (previous_wall_distance + 76)  # distance increase by >3in
+        bumper_pressed = front_left_bumper_pressing or front_right_bumper_pressing
+        left_wall_too_close = current_wall_distance < 90
+
+        # Test for both bumpers pressing at the same time
+        # if bumper_pressed:
+        #     bumper_output_string = "Both bumpers together?:" + str(front_left_bumper_pressing and front_right_bumper_pressing)
+        #     my_print(bumper_output_string)
 
         # Debugging
         output_string = ("M:cwd=" + str(current_wall_distance) +
-                         ":fbp=" + str(front_bumper_pressing) +
-                         ":rbp=" + str(rear_bumper_pressing) +
-                         "llp=" + str(limit_left_pressing) +
-                         "lrp=" + str(limit_right_pressing))
+                         ":pwd=" + str(previous_wall_distance) +
+                         ":flbp=" + str(front_left_bumper_pressing) +
+                         ":frbp=" + str(front_right_bumper_pressing) +
+                         ":llp=" + str(limit_left_pressing) +
+                         ":lrp=" + str(limit_right_pressing))
         my_print(output_string)
 
         # Process the state
         #   Order of precedence: bumper, limit switches, distance, (no input/keep driving forward)     NEEEDS WOOORRRKRKKKKK---------<<<-----<-----------------<<<<--------
         #   More states possible through combinations??
-        if front_bumper_pressing:
+        if bumper_pressed:
             turn_right()
             made_turn_this_iteration = True
-        elif rear_bumper_pressing:
-            pass # Ignore for now
-        elif limit_left_pressing:
+        elif limit_left_pressing or left_wall_too_close:
             prevent_wall_rubbing("left")
             pass
         elif limit_right_pressing:
@@ -333,10 +382,15 @@ def main():
         # Re-find current distance after a turn was executed
         if made_turn_this_iteration:
             current_wall_distance = distance_8.object_distance(MM)
-            current_wall_distance = False
+            made_turn_this_iteration = False
 
         # Cleanup
         previous_wall_distance = current_wall_distance
+
+        # Test loop time - Part 2/2
+        # end_time = brain.timer.time(SECONDS)
+        # duration = end_time - start_time
+        # my_print("loop time:" + str(duration))
 
 
 

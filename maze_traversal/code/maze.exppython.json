@@ -1,6 +1,6 @@
 {
     "mode": "Text",
-    "textContent": "# 1. DELETE EVERYTHING FROM THIS FILE\n# 2. COPY CODE FROM <src.py> INTO THIS FILE\n",
+    "textContent": "# 1. DELETE EVERYTHING FROM THIS FILE\n# 2. COPY THE CODE FROM <src.py> INTO THIS FILE\n",
     "textLanguage": "python",
     "rconfig": [
         {
@@ -92,7 +92,7 @@
             "port": [
                 4
             ],
-            "name": "bumper_front",
+            "name": "bumper_front_right",
             "customName": true,
             "deviceType": "Bumper",
             "deviceClass": "bumper",
@@ -103,7 +103,7 @@
             "port": [
                 5
             ],
-            "name": "bumper_rear",
+            "name": "bumper_front_left",
             "customName": true,
             "deviceType": "Bumper",
             "deviceClass": "bumper",
@@ -118,7 +118,8 @@
             "customName": false,
             "deviceType": "Optical",
             "deviceClass": "optical",
-            "setting": {}
+            "setting": {},
+            "triportSourcePort": 22
         }
     ],
     "slot": 0,
