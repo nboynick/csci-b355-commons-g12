@@ -14,11 +14,14 @@ right_motor_a = Motor(Ports.PORT5, True)
 right_motor_b = Motor(Ports.PORT10, True)
 right_drive_smart = MotorGroup(right_motor_a, right_motor_b)
 drivetrain = SmartDrive(left_drive_smart, right_drive_smart, brain_inertial, 219.44, 320, 40, MM, 1)
-limit_switch_b = Limit(brain.three_wire_port.b)
-limit_switch_c = Limit(brain.three_wire_port.c)
-servo_a = Servo(brain.three_wire_port.a)
+limit_switch_left = Limit(brain.three_wire_port.b)
+limit_switch_right = Limit(brain.three_wire_port.c)
+servo_distance = Servo(brain.three_wire_port.a)
 distance_8 = Distance(Ports.PORT8)
 orientation_f = PotentiometerV2(brain.three_wire_port.f)
+bumper_front = Bumper(brain.three_wire_port.d)
+bumper_rear = Bumper(brain.three_wire_port.e)
+optical_2 = Optical(Ports.PORT2)
 
 
 # Wait for sensor(s) to fully initialize
@@ -27,14 +30,9 @@ wait(100, MSEC)
 def calibrate_drivetrain():
     # Calibrate the Drivetrain Inertial
     sleep(200, MSEC)
-    brain.screen.print("Calibrating")
-    brain.screen.next_row()
-    brain.screen.print("Inertial")
     brain_inertial.calibrate()
     while brain_inertial.is_calibrating():
         sleep(25, MSEC)
-    brain.screen.clear_screen()
-    brain.screen.set_cursor(1, 1)
 
 #endregion VEXcode Generated Robot Configuration
 # ------------------------------------------
@@ -46,335 +44,299 @@ def calibrate_drivetrain():
 #
 # ------------------------------------------
 
-# LIBRARY IMPORTS ##############################################################################################
+# LIBRARY IMPORTS ##################################################################################
 from vex import *
 import math
-# COPY CODE FROM src.py INTO THIS FILE
 
 
 
-# CONSTANTS #######################################################################################
-OPTICAL_ANGLE = 40
 
 
-# GLOBAL VARIABLES ##############################################################################################
-base_wall_dist = -1 # base wall distance in MM
-theo_head = 0       # current base heading in degrees (one of the four cardinal directions)
-stabilize = True    # toggle for the separate stabilization thread
-# pre_stab_time = 0   # brain clock value the last time the stabilization code was run
-right_bump_on = False
-left_bump_on = False
-init_finished = False
+# CONSTANTS ########################################################################################
+ROBOT_LENGTH = 280  # in MM
+DISTANCE_SENSOR_SERVO_POSITION = -50
+DRIVETRAIN_DRIVE_SPEED = 40
+DRIVETRAIN_TURN_SPEED = 30
 
 
 
-# DEBUGGING ####################################################################################################
-def print_debug(func_name, new_wall_dist):
-    # Import global variables into the function scope
-    global base_wall_dist
-    global theo_head
 
-    # Construct the debug string
-    string = "M"
-    string += "  T:" + str(round(brain.timer.time(SECONDS), 3))
-    string += "  F:" + func_name
-    string += "  BD:" + str(base_wall_dist)
-    string += "  ND:" + str(new_wall_dist)
-    string += "  H:" + str(theo_head)
-    string += ":::"
 
-    # Print the debug string
-    # print(string)
+# GLOBAL VARIABLES #################################################################################
+heading_stabilization_on = False
+current_theoretical_heading = 0  # in degrees
 
-    # Wait to ensure that the string has been cleared out of the buffer
+
+
+
+
+# DEBUGGING ########################################################################################
+def my_print(input_string):
+    current_time = brain.timer.time(SECONDS)
+    current_time = round(current_time, 3)
+    output_string = str(current_time) + "--" + input_string + "---"
+    print(output_string)
+    wait(50, MSEC)
+
+
+
+
+
+# HELPER METHODS ###################################################################################
+def init():
+    # Import global variables into the local scope
+    global DISTANCE_SENSOR_SERVO_POSITION
+    global DRIVETRAIN_DRIVE_SPEED
+    global DRIVETRAIN_TURN_SPEED
+    global heading_stabilization_on
+
+    # Give user feedback - Part 1
+    brain.screen.clear_screen()
+    brain.screen.set_cursor(1, 1)
+    brain.screen.print("Initializing...")
+
+    # Drivetrain stuff
+    calibrate_drivetrain()
+    drivetrain.set_drive_velocity(DRIVETRAIN_DRIVE_SPEED, PERCENT)
+    drivetrain.set_turn_velocity(DRIVETRAIN_TURN_SPEED, PERCENT)
+
+    # Position distance sensor's servo
+    servo_distance.set_position(DISTANCE_SENSOR_SERVO_POSITION)
+    wait(650, MSEC)
+
+    # Initialize separte thread/callback for drive direction/heading alignment
+    #  (alignment still turned off at this point)
+    align_heading = Event()
+    align_heading(check_heading_alignment)
     wait(20, MSEC)
+    align_heading.broadcast()
 
+    # Buffer for all changes to sink in
+    wait(1000, MSEC) # Potentially remove this for competition day
 
+    # Enable heading alignment
+    heading_stabilization_on = True
 
-def distance_out_of_range():
-    drivetrain.stop()
-    global stabilize
-    stabilize = False
-    print("Distance Error Encountered. Bot halted, now printing distance values.")
-    while True:
-        print(int(distance_8.object_distance(MM)))
-
-
-
-def incorrect_state_wall_and_bump():
-    drivetrain.stop()
-    global stabilize
-    stabilize = False
-    print("Check bot for weird condition. Left wall gap but also bumping.")
-
-
-
-# HELPER METHODS ############################################################################################
-def heading_aligned():
-    # Import global variables into the local scope
-    global theo_head
-
-    # Obtain the current heading measurement
-    cur_head = brain_inertial.heading(DEGREES)
-
-    # Normalize both to the (90, 450) range to prevent accidental rollover
-    ref_head = theo_head + 90
-    cur_head += 90
-
-    # Return false if a new aligment needs to be executed
-    if cur_head < (ref_head - 1) or cur_head > (ref_head + 1):
-        return False
-    return True
-
-
-
-def modify_theo_head(direction):
-    # Import global variables into the local scope
-    global theo_head
-
-    # Figure out by in which direction the value needs to be modified
-    if direction == "r":
-        modification_value = 90
-    elif direction == "l":
-        modification_value = (-90)
-    else:
-        print("Error in modify_theo_head: direction=" + str(direction) + ":::")
-
-    # Check if the global variable will have rollover and thus modify it
-    # This is (unnecessarily) complex due to the theo_head variable also being used in the other thread
-    #   --> thread safety issues if it is not modified in one single step
-    if theo_head + modification_value > 360:
-        theo_head += (modification_value - 360)
-    elif theo_head + modification_value < 0:
-        theo_head += (modification_value + 360)
-    else:
-        theo_head += modification_value
-
-
-
-def update_drivetrain():
-    # Import global variables into the local scope
-    global theo_head
-    global stabilize
-
-    print("b")
-
-    # Prevent the stabilization thread from running
-    stabilize = False
-
-    # Update the drivetrain
-    drivetrain.stop()
-    drivetrain.turn_to_heading(theo_head, DEGREES)
-    drivetrain.drive(FORWARD)
-
-    # Restart the stabilization thread
-    stabilize = True
-
-
-
-def turn_right_after_bump():
-    # Back away from the corner to give ourselves turning space
-    drivetrain.stop()
-    drivetrain.drive_for(REVERSE, 51, MM)
-
-    # Call the turn right function
-    turn_right()
-
-
-
-def turn_right():
-    # Modify the theoretical heading
-    modify_theo_head("r")
-
-    # Update the drivetrain to recognize the changes
-    update_drivetrain()
-
-
-
-def clear_wall():
+    # Reset brain's timer to reflect "actual" runtime
+    brain.timer.clear()
     pass
 
 
 
-def turn_left(wall_dist):
-    # Modify the theoretical heading
-    modify_theo_head("l")
+def is_heading_aligned():
+    # Import global variables into the local scope
+    global current_theoretical_heading
 
-    clearance = wall_dist * (math.cos(math.radians(50)))
-    clearance += 280
-    drivetrain.stop()
-    drivetrain.drive_for(FORWARD, clearance, MM)
+    # Obtain the current heading measurement
+    current_actual_heading = brain_inertial.heading(DEGREES)
 
-    # Update the drivetrain to recognize the changes
-    update_drivetrain()
+    # Normalize both to the (90, 450) range to prevent accidental rollover
+    #  i.e. if we are off by less than 90 degrees, this function will work otherwise it will just give weird results
+    reference_heading = current_theoretical_heading + 90
+    current_actual_heading += 90
 
-
-
-def register_right_bump():
-    global right_bump_on
-    right_bump_on = True
-
-def register_left_bump():
-    global left_bump_on
-    left_bump_on = True
+    # Return false if a new alignment needs to be executed
+    if (current_actual_heading < (reference_heading - 1) or  # more than 1 degree error towards the LEFT
+        current_actual_heading > (reference_heading + 1)):  # more than 1 degree error towards the RIGHT
+        return False
+    else:
+        return True
 
 
 
-def add_left_wall_buffer():
-    global stabilize
-    stabilize = False
-    print("a")
-    drivetrain.drive_for(REVERSE, 250, MM)
-    drivetrain.turn_for(RIGHT, 7, DEGREES, wait=True)
-    drivetrain.drive_for(FORWARD, 200, MM)
-    update_drivetrain()
-
-
-
-def init():
-    # Import global variabels into the local scope
-    global init_finished
-
-    # Drivetrain
-    calibrate_drivetrain()
-
-    # Heading Stabilization
-    heading_correction_thread = Event()
-    heading_correction_thread(correct_heading)
-    wait(15, MSEC)
-    heading_correction_thread.broadcast()
-
-    # Servo Adjust
-    servo_a.set_position(-50, DEGREES)
-    wait(600, MSEC)
-
-    # Brain Timer Restart
-    brain.timer.clear()
-
-    # Drivetrain Speeds
-    drivetrain.set_drive_velocity(40, PERCENT)
-    drivetrain.set_turn_velocity(30, PERCENT)
-
-    # Setup the limit switch callbacks
-    limit_switch_b.pressed(register_left_bump)
-    limit_switch_c.pressed(register_right_bump)
-    bumper_reset_thread = Event()
-    bumper_reset_thread(reset_bumper_switches)
-    wait(15, MSEC)
-    bumper_reset_thread.broadcast()
-
-    # Wait until log output is ready
-    wait(1, SECONDS)
-    brain.screen.clear_row(1)
-    brain.screen.set_cursor(1,1)
-    brain.screen.print("Here")
-
-    # Commence the other threads
-    init_finished = True
-
-
-
-# CORE PROJECT THREADS ######################################################################################
 def correct_heading():
     # Import global variables into the local scope
-    global stabilize
-    # global pre_stab_time
-    global theo_head
-    global init_finished
+    global current_theoretical_heading
 
-    while not init_finished:
-        wait(200, MSEC)
+    # Prevent the drivetrain from potentially already moving forward
+    drivetrain.stop()
 
-    # Continuousely check if new alignment should be performed
+    # Realign the drivetrain (through VEX API call) which what our current heading should be
+    drivetrain.turn_to_heading(current_theoretical_heading, DEGREES, wait=True)
+
+
+
+def set_current_theoretical_heading(direction):
+    # Import global variables into the local scope
+    global current_theoretical_heading
+
+    # Modify the heading based on the provided direction
+    if direction == "right":
+        current_theoretical_heading += 90
+    elif direction == "left":
+        current_theoretical_heading -= 90
+    else:
+        my_print("bug in set_current_theoretical_heading:" + str(direction))
+
+    # Ensure heading value within constrains (i.e., normalize to 0 - 359 degrees)
+    if current_theoretical_heading > 360:
+        current_theoretical_heading -= 360
+    elif current_theoretical_heading < 0:
+        current_theoretical_heading += 360
+
+
+
+def prevent_wall_rubbing(side):
+    # Import global variables into the local scope
+    global heading_stabilization_on
+
+    # Prevent the drivetrain from driving forward during the turn
+    drivetrain.stop()
+
+    # Prevent heading stabilization during the turn
+    heading_stabilization_on = False
+
+    # Drive backwards, rotate slightly, drive forwards a bit (to give buffer to the wall), realign with original heading
+    drivetrain.drive_for(REVERSE, 200, MM)
+    if side == "left":
+        drivetrain.turn_for(RIGHT, 5, DEGREES)
+    elif side == "right":
+        drivetrain.turn_for(LEFT, 5, DEGREES)
+    else:
+        my_print("prevent_wall_rubbing:bad side argument=" + str(side))
+    drivetrain.drive_for(FORWARD, 200, MM)
+    correct_heading()
+
+    # Re-enable heading stabilization after finishing the turn
+    heading_stabilization_on = True
+
+
+
+def turn_right():
+    # Import global variables into the local scope
+    global heading_stabilization_on
+
+    # Prevent the drivetrain from driving forward during the turn
+    drivetrain.stop()
+
+    # Prevent heading stabilization during the turn
+    heading_stabilization_on = False
+
+    # Drive backwards to avoid the wall
+    drivetrain.drive_for(REVERSE, 75, MM)
+
+    # Modify the theoretical heading
+    set_current_theoretical_heading("right")
+
+    # Make the turn (update the robots position to reflect the change in theoretical heading)
+    correct_heading()
+
+    # Re-enable heading stabilization after finishing the turn
+    heading_stabilization_on = True
+
+
+
+def turn_left(wall_distance):
+    # Import global variables into the local scope
+    global ROBOT_LENGTH
+    global DISTANCE_SENSOR_SERVO_POSITION
+    global heading_stabilization_on
+
+    # Prevent the drivetrain from driving forward during the turn
+    drivetrain.stop()
+
+    # Prevent heading stabilization during the turn
+    heading_stabilization_on = False
+
+    # Drive forwards to avoid the wall
+    wall_clearance_distance = wall_distance * (math.cos(math.radians(abs(DISTANCE_SENSOR_SERVO_POSITION))))
+    wall_clearance_distance += ROBOT_LENGTH
+    drivetrain.drive_for(FORWARD, wall_clearance_distance, MM)
+
+    # Modify the theoretical heading
+    set_current_theoretical_heading("left")
+
+    # Make the turn (update the robots position to reflect the change in theoretical heading)
+    correct_heading()
+
+    # Re-enable heading stabilization after finishing the turn
+    heading_stabilization_on = True
+
+
+
+
+
+# PARALLEL THREADS #################################################################################
+def check_heading_alignment():
+    # Import global variables into the local scope
+    global heading_stabilization_on
+
+    # Instantiate a permanent loop
     while True:
-        if stabilize and heading_aligned():
-            # Perform the re-alignment
-            drivetrain.stop()
-            drivetrain.turn_to_heading(theo_head, DEGREES, wait=True)
-            drivetrain.drive(FORWARD) # Potential issue
+        # Check conditions for heading re-alignment
+        # Note: Use the double loop to prevent calling is_heading_aligned() unless actually necessary, whilst
+        #       also maintaining the result of that function call for a debug print statement
+        if heading_stabilization_on:
+            heading_aligned_result = is_heading_aligned()
+            if not heading_aligned_result:
+                # Realign the heading (if needed)
+                correct_heading()
+                # Prevent heading from being realigned more than once every <2> seconds
+                wait(2, SECONDS)
 
-            # Postpone future alignment at least 1 second (prevent constant re-alignment)
-            pre_wait_time = round(brain.timer.time(SECONDS), 3)
-            wait(1, SECONDS)
-            post_wait_time = round(brain.timer.time(SECONDS), 3)
-
-            # Debug statement
-            print("alignment")
-            # If this debug is not giving back ~1 second separated times, then we will have to go back to
-            #   checking for the time as part of one of the conditional statements instead of a wait fn call
-            # print("A  Pre:" + str(pre_wait_time) + "  Post:" + str(post_wait_time) + ":::")
-
-
-
-def reset_bumper_switches():
-    global init_finished
-
-    while not init_finished:
-        wait(200, MSEC)
-
-    global right_bump_on
-    global left_bump_on
-    while True:
-        print("bumper reset  " + str(left_bump_on) + "  " + str(right_bump_on))
-        right_bump_on = False
-        left_bump_on = False
-        wait(1000, MSEC)
-
+                # Debugging statement
+                string_output = "cha:hso=" + str(heading_stabilization_on) + ":iha=" + str(heading_aligned_result)
+                my_print(string_output)
 
 
 
 def main():
-    # Make sure everything has been initialized
+    # Get global variables
+    # Initialize all the code/sensors
     init()
 
-    # Import global variables into the local scope
-    global base_wall_dist
-    global theo_head
-    # global stabilize
+    # Local variables/(Things needed to figure out the state of the finite state machine)
+    previous_wall_distance = distance_8.object_distance(MM)
+    made_turn_this_iteration = False
 
-
-    base_wall_dist = distance_8.object_distance()
-    drivetrain.drive(FORWARD)
-
+    # Create main game loop
     while True:
-        # Obtain the current distance sensor measurement
-        new_dist = int(distance_8.object_distance(MM))
+        # Get sensor input
+        current_wall_distance = distance_8.object_distance(MM)
+        front_bumper_pressing = bumper_front.pressing()
+        rear_bumper_pressing = bumper_rear.pressing()
+        limit_left_pressing = limit_switch_left.pressing()
+        limit_right_pressing = limit_switch_right.pressing()
+        # optical input???
 
-        # Compare base dist to new dist (the absolute numbers are a buffer region due to inacurate walls)
-        left_wall_fallaway = new_dist > (base_wall_dist + 127) # 5in
-        center_wall_approach = new_dist < (base_wall_dist - 51) # 2in
-        # bumping_into_wall = limit_switch_b.pressing() or limit_switch_c.pressing()
-        bumping_into_wall = right_bump_on and left_bump_on
+        # Parse sensor input
+        distance_increased = current_wall_distance > (previous_wall_distance + 76)  # distance increase by >3in
 
-        if left_bump_on and not right_bump_on:
-            add_left_wall_buffer()
+        # Debugging
+        output_string = ("M:cwd=" + str(current_wall_distance) +
+                         ":fbp=" + str(front_bumper_pressing) +
+                         ":rbp=" + str(rear_bumper_pressing) +
+                         "llp=" + str(limit_left_pressing) +
+                         "lrp=" + str(limit_right_pressing))
+        my_print(output_string)
 
-        # Error if left wall gap but also limit swtich pressing
-        if left_wall_fallaway and bumping_into_wall:
-            incorrect_state_wall_and_bump()
-
-        # Optimization, only get new distance again if needed
-        resync_new_distance = True
-
-        # In order of precedence: bumper, left, right, drive
-        if bumping_into_wall:
-            print_debug("RightBump", new_dist)
-            turn_right_after_bump()
-        elif left_wall_fallaway:
-            print_debug("Left", new_dist)
-            turn_left(base_wall_dist)
-        # elif center_wall_approach:
-        #     print_debug("Right", new_dist)
-        #     turn_right()
+        # Process the state
+        #   Order of precedence: bumper, limit switches, distance, (no input/keep driving forward)     NEEEDS WOOORRRKRKKKKK---------<<<-----<-----------------<<<<--------
+        #   More states possible through combinations??
+        if front_bumper_pressing:
+            turn_right()
+            made_turn_this_iteration = True
+        elif rear_bumper_pressing:
+            pass # Ignore for now
+        elif limit_left_pressing:
+            prevent_wall_rubbing("left")
+            pass
+        elif limit_right_pressing:
+            prevent_wall_rubbing("right")
+            pass
+        elif distance_increased:
+            turn_left(previous_wall_distance)
+            made_turn_this_iteration = True
         else:
-            resync_new_distance = False
+            drivetrain.drive(FORWARD)
 
-        # If a change in the state was created, re-obtain wall distance
-        if resync_new_distance:
-            new_dist = int(distance_8.object_distance(MM))
+        # Re-find current distance after a turn was executed
+        if made_turn_this_iteration:
+            current_wall_distance = distance_8.object_distance(MM)
+            current_wall_distance = False
 
-        # Set current wall distance to the base wall distance for the next loop
-        base_wall_dist = new_dist
+        # Cleanup
+        previous_wall_distance = current_wall_distance
 
 
 
