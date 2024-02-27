@@ -35,28 +35,6 @@
         },
         {
             "port": [
-                2
-            ],
-            "name": "limit_switch_left",
-            "customName": true,
-            "deviceType": "LimitSwitch",
-            "deviceClass": "limit",
-            "setting": {},
-            "triportSourcePort": 22
-        },
-        {
-            "port": [
-                3
-            ],
-            "name": "limit_switch_right",
-            "customName": true,
-            "deviceType": "LimitSwitch",
-            "deviceClass": "limit",
-            "setting": {},
-            "triportSourcePort": 22
-        },
-        {
-            "port": [
                 1
             ],
             "name": "servo_distance",

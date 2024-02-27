@@ -55,6 +55,12 @@ import math
 
 
 
+"""Work Comments:
+
+- get the distance from the distance sensor to the axles on the left side of the bot
+- Update the theoretical heading when calling the wall rubbing code?
+"""
+
 
 
 # CONSTANTS ########################################################################################
@@ -65,6 +71,8 @@ PRINTING_TIMEOUT = 60  # timeout used between print calls in miliseconds
 SERVO_LEFT = 39
 SERVO_STRAIGHT = 2
 SERVO_RIGHT = (-38)
+DEBUG_MODE = True
+GLOBAL_STABILIZATION_SCHUTOFF = False
 
 
 
@@ -94,6 +102,12 @@ def my_print(input_string):
     # Wait/Timeout to prevent output tearing/incomleteness
     wait(PRINTING_TIMEOUT, MSEC)
 
+
+
+def my_printd(input_string):
+    global DEBUG_MODE
+    if DEBUG_MODE:
+        my_print(input_string)
 
 
 
@@ -182,7 +196,7 @@ def set_current_theoretical_heading(direction):
     elif direction == "left":
         current_theoretical_heading -= 90
     else:
-        my_print("bug in set_current_theoretical_heading:" + str(direction))
+        my_printd("bug in set_current_theoretical_heading:" + str(direction))
 
     # Ensure heading value within constrains (i.e., normalize to 0 - 359 degrees)
     if current_theoretical_heading > 360:
@@ -246,7 +260,7 @@ def prevent_wall_rubbing(side):
     elif side == "right":
         evasion_direction = LEFT
     else:
-        my_print("prevent_wall_rubbing:bad side argument=" + str(side))
+        my_printd("prevent_wall_rubbing:bad side argument=" + str(side))
 
     # Calculate evasion distance
     evasion_distance = backtrack_distance * math.cos(math.radians(abs(evasion_angle)))
@@ -287,13 +301,29 @@ def turn_right():
 
 
 def refind_wall():
+    # Import global variables into the local scope
     global DRIVETRAIN_DRIVE_SPEED
+
+    # Stop the drivetrain (to make changes to its config)
     drivetrain.stop()
+
+    # Slow down the drivetrain to not accidentally miss a U-turn wall
     drivetrain.set_drive_velocity(5, PERCENT)
+
+    # Drive forward until a wall is registered
     drivetrain.drive(FORWARD)
+    far_corridor_dist = distance_8.object_distance(MM)
     while True:
-        if distance_8.object_distance(MM) > 76:
+        if distance_8.object_distance(MM) + 254 < far_corridor_dist:
             break
+
+    # Debugging
+    output = "RW"
+    output += ":far_corr_dist=" + str(far_corridor_dist)
+    output += ":new_dist=" + str(distance_8.object_distance(MM))
+    my_printd(output)
+
+    # Rvert changes made to the drivetrain config
     drivetrain.set_drive_velocity(DRIVETRAIN_DRIVE_SPEED, PERCENT)
 
 
@@ -311,7 +341,6 @@ def turn_left(wall_distance):
     heading_stabilization_on = False
 
     # Drive forwards to avoid the wall
-    # wall_clearance_distance = wall_distance * (math.cos(math.radians(abs(DISTANCE_SENSOR_SERVO_POSITION))))
     wall_clearance_distance = ROBOT_LENGTH
     drivetrain.drive_for(FORWARD, wall_clearance_distance, MM)
 
@@ -322,21 +351,13 @@ def turn_left(wall_distance):
     correct_heading()
 
     # Move forward to make distance sensor see the new wall
-    # if wall_distance < 80:
-    #     move_forward_distance = wall_distance
-    # else:
-    #     move_forward_distance = 80
-    # move_forward_distance += 75
-    # drivetrain.drive_for(FORWARD, move_forward_distance, MM)
-    print("refind")
+    my_printd("calling refind_wall()")
     refind_wall()
 
-    output_string = "------\n"
-    output_string += "wall_dist:" + str(wall_distance) + "\n"
-    output_string += "wall clear dist:" + str(wall_clearance_distance) + "\n"
-    # output_string += "move forw dist:" + str(move_forward_distance) + "\n"
-    output_string += "-----\n"
-    my_print(output_string)
+    output_string = "TL"
+    output_string += ":wall_dist=" + str(wall_distance)
+    output_string += ":wall_clear_dist=" + str(wall_clearance_distance)
+    my_printd(output_string)
 
     # Re-enable heading stabilization after finishing the turn
     heading_stabilization_on = True
@@ -349,9 +370,10 @@ def turn_left(wall_distance):
 def check_heading_alignment():
     # Import global variables into the local scope
     global heading_stabilization_on
+    global GLOBAL_STABILIZATION_SCHUTOFF
 
     # Instantiate a permanent loop
-    while True:
+    while True and not GLOBAL_STABILIZATION_SCHUTOFF:
         # Check conditions for heading re-alignment
         # Note: Use the double loop to prevent calling is_heading_aligned() unless actually necessary, whilst
         #       also maintaining the result of that function call for a debug print statement
@@ -362,8 +384,8 @@ def check_heading_alignment():
                 correct_heading()
 
                 # Debugging statement
-                string_output = "cha:hso=" + str(heading_stabilization_on) + ":iha=" + str(heading_aligned_result)
-                my_print(string_output)
+                string_output = "CHA:hso=" + str(heading_stabilization_on) + ":iha=" + str(heading_aligned_result)
+                my_printd(string_output)
 
                 # Prevent heading from being realigned more than once every <2> seconds
                 wait(2, SECONDS)
@@ -372,6 +394,8 @@ def check_heading_alignment():
 
 def main():
     # Get global variables
+    global current_theoretical_heading
+
     # Initialize all the code/sensors
     init()
 
@@ -381,36 +405,25 @@ def main():
 
     # Create main game loop
     while True:
-        # Test loop time - Part 1/2
-        # start_time = brain.timer.time(SECONDS)
-
         # Get sensor input
         current_wall_distance = int(distance_8.object_distance(MM))
         front_left_bumper_pressing = bumper_front_left.pressing()
         front_right_bumper_pressing = bumper_front_right.pressing()
-        limit_left_pressing = False #limit_switch_left.pressing()
-        limit_right_pressing = False #limit_switch_right.pressing()
         # optical input???
 
         # Parse sensor input
         distance_increased = current_wall_distance > (previous_wall_distance + 76)  # distance increase by >3in
         bumper_pressed = front_left_bumper_pressing or front_right_bumper_pressing
         left_wall_too_close = current_wall_distance < 90
-        right_wall_too_close = False
-
-        # Test for both bumpers pressing at the same time
-        # if bumper_pressed:
-        #     bumper_output_string = "Both bumpers together?:" + str(front_left_bumper_pressing and front_right_bumper_pressing)
-        #     my_print(bumper_output_string)
+        right_wall_too_close = current_wall_distance > 178 # <<<<<<< this is not the best way to do this
 
         # Debugging
         output_string = ("M:cwd=" + str(current_wall_distance) +
                          ":pwd=" + str(previous_wall_distance) +
                          ":flbp=" + str(front_left_bumper_pressing) +
                          ":frbp=" + str(front_right_bumper_pressing) +
-                         ":llp=" + str(limit_left_pressing) +
-                         ":lrp=" + str(limit_right_pressing))
-        my_print(output_string)
+                         ":head=" + str(current_theoretical_heading))
+        my_printd(output_string)
 
         # Process the state
         #   Order of precedence: bumper, limit switches, distance, (no input/keep driving forward)     NEEEDS WOOORRRKRKKKKK---------<<<-----<-----------------<<<<--------
@@ -418,12 +431,10 @@ def main():
         if bumper_pressed:
             turn_right()
             made_turn_this_iteration = True
-        elif limit_left_pressing or left_wall_too_close:
+        elif left_wall_too_close:
             prevent_wall_rubbing("left")
-            pass
-        elif limit_right_pressing or right_wall_too_close:
+        elif right_wall_too_close:
             prevent_wall_rubbing("right")
-            pass
         elif distance_increased:
             turn_left(previous_wall_distance)
             made_turn_this_iteration = True
@@ -437,11 +448,6 @@ def main():
 
         # Cleanup
         previous_wall_distance = current_wall_distance
-
-        # Test loop time - Part 2/2
-        # end_time = brain.timer.time(SECONDS)
-        # duration = end_time - start_time
-        # my_print("loop time:" + str(duration))
 
 
 
