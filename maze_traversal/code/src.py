@@ -58,11 +58,13 @@ import math
 
 
 # CONSTANTS ########################################################################################
-ROBOT_LENGTH = 170  # in MM
-DISTANCE_SENSOR_SERVO_POSITION = -50
+ROBOT_LENGTH = 110  # in MM
 DRIVETRAIN_DRIVE_SPEED = 40
 DRIVETRAIN_TURN_SPEED = 30
 PRINTING_TIMEOUT = 60  # timeout used between print calls in miliseconds
+SERVO_LEFT = 39
+SERVO_STRAIGHT = 2
+SERVO_RIGHT = (-38)
 
 
 
@@ -99,10 +101,10 @@ def my_print(input_string):
 # HELPER METHODS ###################################################################################
 def init():
     # Import global variables into the local scope
-    global DISTANCE_SENSOR_SERVO_POSITION
     global DRIVETRAIN_DRIVE_SPEED
     global DRIVETRAIN_TURN_SPEED
     global heading_stabilization_on
+    global SERVO_LEFT
 
     # Give user feedback - Part 1
     brain.screen.clear_screen()
@@ -115,8 +117,8 @@ def init():
     drivetrain.set_turn_velocity(DRIVETRAIN_TURN_SPEED, PERCENT)
 
     # Position distance sensor's servo
-    # servo_distance.set_position(DISTANCE_SENSOR_SERVO_POSITION)
-    # wait(650, MSEC)
+    servo_distance.set_position(SERVO_LEFT, DEGREES)
+    wait(650, MSEC)
 
     # Initialize separte thread/callback for drive direction/heading alignment
     #  (alignment still turned off at this point)
@@ -190,6 +192,40 @@ def set_current_theoretical_heading(direction):
 
 
 
+def realign_with_wall():
+    # TODO: REFACTOR
+    global heading_stabilization_on
+    heading_stabilization_on = False
+    global current_theoretical_heading
+    drivetrain.stop()
+    # Get the current distance to wall
+    first_wall_dist = distance_8.object_distance(MM)
+    # Drive forward by min. 2 inches/51MM ?
+    travel_distance = 102 # in MM
+    drivetrain.drive_for(FORWARD, travel_distance, MM)
+    # Get second distance
+    second_wall_dist = distance_8.object_distance(MM)
+    # Do the math
+    wall_distance_change = second_wall_dist - first_wall_dist
+    print("wall:" + str(wall_distance_change))
+    turn_right = True
+    if wall_distance_change > 0:
+        turn_right = False
+    wall_distance_change = abs(wall_distance_change)
+    delta_angle = math.degrees(math.atan(wall_distance_change / travel_distance))
+    print("ang:" + str(delta_angle))
+    # Set the new heading
+    if turn_right:
+        current_theoretical_heading += delta_angle
+    else:
+        current_theoretical_heading -= delta_angle
+    print("head:" + str(current_theoretical_heading))
+    # Update current heading
+    correct_heading()
+    heading_stabilization_on = True
+
+
+
 def prevent_wall_rubbing(side):
     # Local variables used for code manipulation (i.e., fine tuning)
     backtrack_distance = 250  # in MM
@@ -250,6 +286,18 @@ def turn_right():
 
 
 
+def refind_wall():
+    global DRIVETRAIN_DRIVE_SPEED
+    drivetrain.stop()
+    drivetrain.set_drive_velocity(5, PERCENT)
+    drivetrain.drive(FORWARD)
+    while True:
+        if distance_8.object_distance(MM) > 76:
+            break
+    drivetrain.set_drive_velocity(DRIVETRAIN_DRIVE_SPEED, PERCENT)
+
+
+
 def turn_left(wall_distance):
     # Import global variables into the local scope
     global ROBOT_LENGTH
@@ -274,17 +322,19 @@ def turn_left(wall_distance):
     correct_heading()
 
     # Move forward to make distance sensor see the new wall
-    if wall_distance < 80:
-        move_forward_distance = wall_distance
-    else:
-        move_forward_distance = 80
-    move_forward_distance += 75
-    drivetrain.drive_for(FORWARD, move_forward_distance, MM)
+    # if wall_distance < 80:
+    #     move_forward_distance = wall_distance
+    # else:
+    #     move_forward_distance = 80
+    # move_forward_distance += 75
+    # drivetrain.drive_for(FORWARD, move_forward_distance, MM)
+    print("refind")
+    refind_wall()
 
     output_string = "------\n"
     output_string += "wall_dist:" + str(wall_distance) + "\n"
     output_string += "wall clear dist:" + str(wall_clearance_distance) + "\n"
-    output_string += "move forw dist:" + str(move_forward_distance) + "\n"
+    # output_string += "move forw dist:" + str(move_forward_distance) + "\n"
     output_string += "-----\n"
     my_print(output_string)
 
@@ -338,14 +388,15 @@ def main():
         current_wall_distance = int(distance_8.object_distance(MM))
         front_left_bumper_pressing = bumper_front_left.pressing()
         front_right_bumper_pressing = bumper_front_right.pressing()
-        limit_left_pressing = limit_switch_left.pressing()
-        limit_right_pressing = limit_switch_right.pressing()
+        limit_left_pressing = False #limit_switch_left.pressing()
+        limit_right_pressing = False #limit_switch_right.pressing()
         # optical input???
 
         # Parse sensor input
         distance_increased = current_wall_distance > (previous_wall_distance + 76)  # distance increase by >3in
         bumper_pressed = front_left_bumper_pressing or front_right_bumper_pressing
         left_wall_too_close = current_wall_distance < 90
+        right_wall_too_close = False
 
         # Test for both bumpers pressing at the same time
         # if bumper_pressed:
@@ -370,7 +421,7 @@ def main():
         elif limit_left_pressing or left_wall_too_close:
             prevent_wall_rubbing("left")
             pass
-        elif limit_right_pressing:
+        elif limit_right_pressing or right_wall_too_close:
             prevent_wall_rubbing("right")
             pass
         elif distance_increased:
