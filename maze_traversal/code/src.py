@@ -19,7 +19,9 @@ distance_8 = Distance(Ports.PORT8)
 orientation_f = PotentiometerV2(brain.three_wire_port.f)
 bumper_front_right = Bumper(brain.three_wire_port.d)
 bumper_front_left = Bumper(brain.three_wire_port.e)
-optical_2 = Optical(Ports.PORT2)
+optical_3 = Optical(Ports.PORT3)
+limit_back_left = Limit(brain.three_wire_port.g)
+limit_back_right = Limit(brain.three_wire_port.h)
 
 
 # Wait for sensor(s) to fully initialize
@@ -54,32 +56,29 @@ import math
 
 
 """Work Comments:
-- [Creed] Add front facing optical sensor for frontal collision detection
-- [Creed] Fix the screw blocking some gear in the servo?
-- [Nathan] Add two methods for stopping at left turn
-   - 1: Perform a quicker check in the main loop to prevent robot from driving forward too far
-   - 2: Estimate the distance it will have driven incorrectly and account for that in the drive forward
-        distance.
+"""
+
+"""Memos:
 """
 
 
 
 # CONSTANTS ########################################################################################
-ROBOT_LENGTH = 140  # in MM
-DRIVETRAIN_DRIVE_SPEED = 5 # 40
-DRIVETRAIN_TURN_SPEED = 30
+ROBOT_LENGTH = 170  # in MM
+DRIVETRAIN_DRIVE_SPEED = 35
+DRIVETRAIN_TURN_SPEED = 15
 PRINTING_TIMEOUT = 60  # timeout used between print calls in miliseconds
 
 
 SERVO_LEFT = 33
-SERVO_STRAIGHT = 2
+SERVO_STRAIGHT = 2 # not working
 SERVO_RIGHT = (-34)
 
 # Print messages marked as debugging (i.e., those using the my_printd function)
 DEBUG_MODE = True
 
 # Permanently turn off the callback/separeate 'thread' used for heading stabilization
-GLOBAL_STABILIZATION_SCHUTOFF = False
+GLOBAL_STABILIZATION_SCHUTOFF = True
 
 # Distance between the tip of the distance sensor and the tip of the axle when the distance sensor
 # is turned 90° towards the left
@@ -107,6 +106,9 @@ MAXIMUM_LEFT_WALL_SEPARATION_DIST = MINIMUM_LEFT_WALL_SEAPARATION_DIST + LEFT_WA
 # GLOBAL VARIABLES #################################################################################
 heading_stabilization_on = False
 current_theoretical_heading = 0  # in degrees
+
+limit_triggered_past_iter = False
+most_recent_turn = None
 
 
 
@@ -173,9 +175,47 @@ def init():
     # Enable heading alignment
     heading_stabilization_on = True
 
+    # Register limit switch callbacks
+    limit_back_right.pressed(limit_left_triggered)
+
     # Reset brain's timer to reflect "actual" runtime
     brain.timer.clear()
     pass
+
+
+
+def limit_left_triggered():
+    drivetrain.stop()
+    my_printd("limit")
+    global most_recent_turn
+    global current_theoretical_heading
+    copy_most_recent = most_recent_turn
+    my_printd("h:" + str(current_theoretical_heading))
+    if most_recent_turn == "right":
+        set_current_theoretical_heading("left")
+    elif most_recent_turn == "left":
+        set_current_theoretical_heading("right")
+    my_printd("h:" + str(current_theoretical_heading))
+    correct_heading()
+    my_printd("ah:" + str(brain_inertial.heading(DEGREES)))
+    drivetrain.drive_for(FORWARD, 100, MM)
+    set_current_theoretical_heading(copy_most_recent)
+    my_printd("h:" + str(current_theoretical_heading))
+    correct_heading()
+    my_printd("ah:" + str(brain_inertial.heading(DEGREES)))
+
+
+
+def correct_heading():
+    # Import global variables into the local scope
+    global current_theoretical_heading
+
+    # Prevent the drivetrain from potentially already moving forward
+    drivetrain.stop()
+
+    # Realign the drivetrain (through VEX API call) with what our current heading should be
+    drivetrain.turn_to_heading(current_theoretical_heading, DEGREES, wait=False)
+    wait(10, SECONDS)
 
 
 
@@ -200,27 +240,18 @@ def is_heading_aligned():
 
 
 
-def correct_heading():
-    # Import global variables into the local scope
-    global current_theoretical_heading
-
-    # Prevent the drivetrain from potentially already moving forward
-    drivetrain.stop()
-
-    # Realign the drivetrain (through VEX API call) which what our current heading should be
-    drivetrain.turn_to_heading(current_theoretical_heading, DEGREES, wait=True)
-
-
-
 def set_current_theoretical_heading(direction):
     # Import global variables into the local scope
     global current_theoretical_heading
+    global most_recent_turn
 
     # Modify the heading based on the provided direction
     if direction == "right":
         current_theoretical_heading += 90
+        most_recent_turn = "right"
     elif direction == "left":
         current_theoretical_heading -= 90
+        most_recent_turn = "left"
     else:
         my_printd("bug in set_current_theoretical_heading:" + str(direction))
 
@@ -232,44 +263,44 @@ def set_current_theoretical_heading(direction):
 
 
 
-def realign_with_wall():
-    # TODO: REFACTOR
-    global heading_stabilization_on
-    heading_stabilization_on = False
-    global current_theoretical_heading
-    drivetrain.stop()
-    # Get the current distance to wall
-    first_wall_dist = distance_8.object_distance(MM)
-    # Drive forward by min. 2 inches/51MM ?
-    travel_distance = 102 # in MM
-    drivetrain.drive_for(FORWARD, travel_distance, MM)
-    # Get second distance
-    second_wall_dist = distance_8.object_distance(MM)
-    # Do the math
-    wall_distance_change = second_wall_dist - first_wall_dist
-    print("wall:" + str(wall_distance_change))
-    turn_right = True
-    if wall_distance_change > 0:
-        turn_right = False
-    wall_distance_change = abs(wall_distance_change)
-    delta_angle = math.degrees(math.atan(wall_distance_change / travel_distance))
-    print("ang:" + str(delta_angle))
-    # Set the new heading
-    if turn_right:
-        current_theoretical_heading += delta_angle
-    else:
-        current_theoretical_heading -= delta_angle
-    print("head:" + str(current_theoretical_heading))
-    # Update current heading
-    correct_heading()
-    heading_stabilization_on = True
+# def realign_with_wall():
+#     # TODO: REFACTOR
+#     global heading_stabilization_on
+#     heading_stabilization_on = False
+#     global current_theoretical_heading
+#     drivetrain.stop()
+#     # Get the current distance to wall
+#     first_wall_dist = distance_8.object_distance(MM)
+#     # Drive forward by min. 2 inches/51MM ?
+#     travel_distance = 102 # in MM
+#     drivetrain.drive_for(FORWARD, travel_distance, MM)
+#     # Get second distance
+#     second_wall_dist = distance_8.object_distance(MM)
+#     # Do the math
+#     wall_distance_change = second_wall_dist - first_wall_dist
+#     print("wall:" + str(wall_distance_change))
+#     turn_right = True
+#     if wall_distance_change > 0:
+#         turn_right = False
+#     wall_distance_change = abs(wall_distance_change)
+#     delta_angle = math.degrees(math.atan(wall_distance_change / travel_distance))
+#     print("ang:" + str(delta_angle))
+#     # Set the new heading
+#     if turn_right:
+#         current_theoretical_heading += delta_angle
+#     else:
+#         current_theoretical_heading -= delta_angle
+#     print("head:" + str(current_theoretical_heading))
+#     # Update current heading
+#     correct_heading()
+#     heading_stabilization_on = True
 
 
 
 def prevent_wall_rubbing(side):
     # Local variables used for code manipulation (i.e., fine tuning)
-    backtrack_distance = 250  # in MM
-    evasion_angle = 7  # in degrees
+    backtrack_distance = 200  # in MM
+    evasion_angle = 5  # in degrees
 
     # Import global variables into the local scope
     global heading_stabilization_on
@@ -338,14 +369,15 @@ def refind_wall():
     drivetrain.stop()
 
     # Slow down the drivetrain to not accidentally miss a U-turn wall
-    drivetrain.set_drive_velocity(50, PERCENT)
+    drivetrain.set_drive_velocity(35, PERCENT)
 
     # Drive forward until a wall is registered
     drivetrain.drive(FORWARD)
     far_corridor_dist = distance_8.object_distance(MM)
     while True:
         temp = distance_8.object_distance(MM)
-        if temp < (far_corridor_dist - 220):
+        if temp < (far_corridor_dist - 220) and temp < 400: # potential bug
+            drivetrain.stop()
             break
 
     # Debugging
@@ -371,14 +403,10 @@ def turn_left():
     # Prevent heading stabilization during the turn
     heading_stabilization_on = False
 
-    wait(10, SECONDS)
-
     # Drive forwards to avoid the wall
     wall_clearance_distance = ROBOT_LENGTH
-    my_printd("driving_forward_bot")
-    drivetrain.drive_for(FORWARD, wall_clearance_distance, MM)
-
-    wait(10, SECONDS)
+    debugvar_dist__travelled_after_fn_call = 50
+    drivetrain.drive_for(FORWARD, (wall_clearance_distance - debugvar_dist__travelled_after_fn_call), MM)
 
     # Modify the theoretical heading
     set_current_theoretical_heading("left")
@@ -386,6 +414,7 @@ def turn_left():
     # Make the turn (update the robots position to reflect the change in theoretical heading)
     correct_heading()
 
+    my_printd("here")
     # Move forward to make distance sensor see the new wall
     refind_wall()
 
@@ -450,11 +479,11 @@ def main():
         # Process Distance Sensor
         current_wall_distance = int(distance_8.object_distance(MM)) - AXLE_OPTICAL_DISTANCE
         left_wall_gap = current_wall_distance > (previous_wall_distance + MINIMUM_WALL_DIST_INCREASE_LEFT_TURN_POSSIBILITY)
-        # if left_wall_gap: drivetrain.stop() # <-- This should probably only be used as a fallback option
+        if left_wall_gap: drivetrain.stop() # <-- This should probably only be used as a fallback option
         global MINIMUM_LEFT_WALL_SEAPARATION_DIST
         left_wall_too_close = current_wall_distance < MINIMUM_LEFT_WALL_SEAPARATION_DIST
         global MAXIMUM_LEFT_WALL_SEPARATION_DIST
-        left_wall_too_far = current_wall_distance > MAXIMUM_LEFT_WALL_SEPARATION_DIST
+        left_wall_too_far = False #current_wall_distance > MAXIMUM_LEFT_WALL_SEPARATION_DIST
 
         # Process Optical Sensor
         # TODO: for future reference
@@ -477,13 +506,17 @@ def main():
         #   Order of precedence: bumper, limit switches, distance, (no input/keep driving forward)     NEEEDS WOOORRRKRKKKKK---------<<<-----<-----------------<<<<--------
         #   More states possible through combinations??
         if bumper_pressed:
+            my_printd("TR")
             turn_right()
             made_turn_this_iteration = True
         elif left_wall_too_close:
+            my_printd("LWTC")
             prevent_wall_rubbing("left")
         elif left_wall_too_far:
+            my_printd("RWTC")
             prevent_wall_rubbing("right")
         elif left_wall_gap:
+            my_printd("LWG")
             turn_left()
             made_turn_this_iteration = True
         else:
@@ -500,3 +533,11 @@ def main():
 
 
 main()
+
+
+# def Test():
+#     servo_distance.set_position(20, DEGREES)
+#     wait(900, MSEC)
+#     servo_distance.set_position(3, DEGREES)
+
+# Test()

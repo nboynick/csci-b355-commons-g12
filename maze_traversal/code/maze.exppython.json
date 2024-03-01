@@ -90,12 +90,34 @@
         },
         {
             "port": [
-                2
+                3
             ],
-            "name": "optical_2",
+            "name": "optical_3",
             "customName": false,
             "deviceType": "Optical",
             "deviceClass": "optical",
+            "setting": {},
+            "triportSourcePort": 22
+        },
+        {
+            "port": [
+                7
+            ],
+            "name": "limit_back_left",
+            "customName": true,
+            "deviceType": "LimitSwitch",
+            "deviceClass": "limit",
+            "setting": {},
+            "triportSourcePort": 22
+        },
+        {
+            "port": [
+                8
+            ],
+            "name": "limit_back_right",
+            "customName": true,
+            "deviceType": "LimitSwitch",
+            "deviceClass": "limit",
             "setting": {},
             "triportSourcePort": 22
         }
