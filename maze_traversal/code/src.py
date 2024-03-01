@@ -14,8 +14,6 @@ right_motor_a = Motor(Ports.PORT5, True)
 right_motor_b = Motor(Ports.PORT10, True)
 right_drive_smart = MotorGroup(right_motor_a, right_motor_b)
 drivetrain = SmartDrive(left_drive_smart, right_drive_smart, brain_inertial, 219.44, 320, 40, MM, 1)
-limit_switch_left = Limit(brain.three_wire_port.b)
-limit_switch_right = Limit(brain.three_wire_port.c)
 servo_distance = Servo(brain.three_wire_port.a)
 distance_8 = Distance(Ports.PORT8)
 orientation_f = PotentiometerV2(brain.three_wire_port.f)
@@ -56,23 +54,51 @@ import math
 
 
 """Work Comments:
-
-- get the distance from the distance sensor to the axles on the left side of the bot
-- Update the theoretical heading when calling the wall rubbing code?
+- [Creed] Add front facing optical sensor for frontal collision detection
+- [Creed] Fix the screw blocking some gear in the servo?
+- [Nathan] Add two methods for stopping at left turn
+   - 1: Perform a quicker check in the main loop to prevent robot from driving forward too far
+   - 2: Estimate the distance it will have driven incorrectly and account for that in the drive forward
+        distance.
 """
 
 
 
 # CONSTANTS ########################################################################################
-ROBOT_LENGTH = 110  # in MM
-DRIVETRAIN_DRIVE_SPEED = 40
+ROBOT_LENGTH = 140  # in MM
+DRIVETRAIN_DRIVE_SPEED = 5 # 40
 DRIVETRAIN_TURN_SPEED = 30
 PRINTING_TIMEOUT = 60  # timeout used between print calls in miliseconds
-SERVO_LEFT = 39
+
+
+SERVO_LEFT = 33
 SERVO_STRAIGHT = 2
-SERVO_RIGHT = (-38)
+SERVO_RIGHT = (-34)
+
+# Print messages marked as debugging (i.e., those using the my_printd function)
 DEBUG_MODE = True
+
+# Permanently turn off the callback/separeate 'thread' used for heading stabilization
 GLOBAL_STABILIZATION_SCHUTOFF = False
+
+# Distance between the tip of the distance sensor and the tip of the axle when the distance sensor
+# is turned 90° towards the left
+AXLE_OPTICAL_DISTANCE = 70
+
+# Distance constant used in various contexts (in milimeters)
+# TODO: Find better namings
+# Minimum needed change in the distance to the left wall to consider it to be a hole/gap/potential
+#  left turn
+MINIMUM_WALL_DIST_INCREASE_LEFT_TURN_POSSIBILITY = 75
+# Minimum distance to maintain between the left wall and the outside of the left axle before triggering
+#  some form of wall evasion code
+MINIMUM_LEFT_WALL_SEAPARATION_DIST = 20
+# Width of the band of distance in which we want the robot to be driving (used for calculating the max
+#  distance away from the left wall)
+LEFT_WALL_SEPARATION_BAND = 75
+# Maximum distance that the bot should be away from the left wall before moving closer to the left wall
+#  again
+MAXIMUM_LEFT_WALL_SEPARATION_DIST = MINIMUM_LEFT_WALL_SEAPARATION_DIST + LEFT_WALL_SEPARATION_BAND
 
 
 
@@ -247,6 +273,8 @@ def prevent_wall_rubbing(side):
 
     # Import global variables into the local scope
     global heading_stabilization_on
+    global current_theoretical_heading
+
 
     # Prevent the drivetrain from driving forward during the turn
     drivetrain.stop()
@@ -257,8 +285,10 @@ def prevent_wall_rubbing(side):
     # Choose turn direction
     if side == "left":
         evasion_direction = RIGHT
+        current_theoretical_heading += 1
     elif side == "right":
         evasion_direction = LEFT
+        current_theoretical_heading -= 1
     else:
         my_printd("prevent_wall_rubbing:bad side argument=" + str(side))
 
@@ -308,13 +338,14 @@ def refind_wall():
     drivetrain.stop()
 
     # Slow down the drivetrain to not accidentally miss a U-turn wall
-    drivetrain.set_drive_velocity(5, PERCENT)
+    drivetrain.set_drive_velocity(50, PERCENT)
 
     # Drive forward until a wall is registered
     drivetrain.drive(FORWARD)
     far_corridor_dist = distance_8.object_distance(MM)
     while True:
-        if distance_8.object_distance(MM) + 254 < far_corridor_dist:
+        temp = distance_8.object_distance(MM)
+        if temp < (far_corridor_dist - 220):
             break
 
     # Debugging
@@ -328,7 +359,7 @@ def refind_wall():
 
 
 
-def turn_left(wall_distance):
+def turn_left():
     # Import global variables into the local scope
     global ROBOT_LENGTH
     global DISTANCE_SENSOR_SERVO_POSITION
@@ -340,9 +371,14 @@ def turn_left(wall_distance):
     # Prevent heading stabilization during the turn
     heading_stabilization_on = False
 
+    wait(10, SECONDS)
+
     # Drive forwards to avoid the wall
     wall_clearance_distance = ROBOT_LENGTH
+    my_printd("driving_forward_bot")
     drivetrain.drive_for(FORWARD, wall_clearance_distance, MM)
+
+    wait(10, SECONDS)
 
     # Modify the theoretical heading
     set_current_theoretical_heading("left")
@@ -351,12 +387,10 @@ def turn_left(wall_distance):
     correct_heading()
 
     # Move forward to make distance sensor see the new wall
-    my_printd("calling refind_wall()")
     refind_wall()
 
     output_string = "TL"
-    output_string += ":wall_dist=" + str(wall_distance)
-    output_string += ":wall_clear_dist=" + str(wall_clearance_distance)
+    # output_string += ":wall_clear_dist=" + str(wall_clearance_distance)
     my_printd(output_string)
 
     # Re-enable heading stabilization after finishing the turn
@@ -395,6 +429,7 @@ def check_heading_alignment():
 def main():
     # Get global variables
     global current_theoretical_heading
+    global AXLE_OPTICAL_DISTANCE
 
     # Initialize all the code/sensors
     init()
@@ -405,21 +440,34 @@ def main():
 
     # Create main game loop
     while True:
-        # Get sensor input
-        current_wall_distance = int(distance_8.object_distance(MM))
+        """
+        Sensor Priorities (in terms of having to react to them quickly:
+         - Distance sensor pointing towards the left wall
+         - [Optical sensor pointing towards the front]
+         - Front bumpers
+        """
+
+        # Process Distance Sensor
+        current_wall_distance = int(distance_8.object_distance(MM)) - AXLE_OPTICAL_DISTANCE
+        left_wall_gap = current_wall_distance > (previous_wall_distance + MINIMUM_WALL_DIST_INCREASE_LEFT_TURN_POSSIBILITY)
+        # if left_wall_gap: drivetrain.stop() # <-- This should probably only be used as a fallback option
+        global MINIMUM_LEFT_WALL_SEAPARATION_DIST
+        left_wall_too_close = current_wall_distance < MINIMUM_LEFT_WALL_SEAPARATION_DIST
+        global MAXIMUM_LEFT_WALL_SEPARATION_DIST
+        left_wall_too_far = current_wall_distance > MAXIMUM_LEFT_WALL_SEPARATION_DIST
+
+        # Process Optical Sensor
+        # TODO: for future reference
+
+        # Process Bumper(s) input
         front_left_bumper_pressing = bumper_front_left.pressing()
         front_right_bumper_pressing = bumper_front_right.pressing()
-        # optical input???
-
-        # Parse sensor input
-        distance_increased = current_wall_distance > (previous_wall_distance + 76)  # distance increase by >3in
         bumper_pressed = front_left_bumper_pressing or front_right_bumper_pressing
-        left_wall_too_close = current_wall_distance < 90
-        right_wall_too_close = current_wall_distance > 178 # <<<<<<< this is not the best way to do this
 
         # Debugging
-        output_string = ("M:cwd=" + str(current_wall_distance) +
+        output_string = ("M" +
                          ":pwd=" + str(previous_wall_distance) +
+                         ":cwd=" + str(current_wall_distance) +
                          ":flbp=" + str(front_left_bumper_pressing) +
                          ":frbp=" + str(front_right_bumper_pressing) +
                          ":head=" + str(current_theoretical_heading))
@@ -433,10 +481,10 @@ def main():
             made_turn_this_iteration = True
         elif left_wall_too_close:
             prevent_wall_rubbing("left")
-        elif right_wall_too_close:
+        elif left_wall_too_far:
             prevent_wall_rubbing("right")
-        elif distance_increased:
-            turn_left(previous_wall_distance)
+        elif left_wall_gap:
+            turn_left()
             made_turn_this_iteration = True
         else:
             drivetrain.drive(FORWARD)
