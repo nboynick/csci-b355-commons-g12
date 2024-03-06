@@ -17,7 +17,7 @@ drivetrain = SmartDrive(left_drive_smart, right_drive_smart, brain_inertial, 259
 servo_a = Servo(brain.three_wire_port.a)
 bumper_d = Bumper(brain.three_wire_port.d)
 distance_8 = Distance(Ports.PORT8)
-motor_3 = Motor(Ports.PORT3, False)
+bumper_e = Bumper(brain.three_wire_port.e)
 
 
 # Wait for sensor(s) to fully initialize
@@ -53,64 +53,104 @@ from vex import *
 # Begin project code
 
 def adjust(wall_dif):
+    print("adjust")
     drivetrain.stop()
     if(wall_dif > 0):
-	    drivetrain.turn_for(LEFT, 5, DEGREES)
+	    drivetrain.turn_for(LEFT, 15, DEGREES)
     else:
-	    drivetrain.turn_for(RIGHT, 5, DEGREES)
+	    drivetrain.turn_for(RIGHT, 15, DEGREES)
+    wait(20, MSEC)
 
 def turn_left():
+    print("left")
     drivetrain.stop()
-    drivetrain.drive_for(FORWARD, 170,  MM)
+    drivetrain.drive_for(FORWARD, 300, MM)
     drivetrain.turn_for(LEFT, 90, DEGREES)
+    drivetrain.drive_for(FORWARD, 200, MM)
     #Maybe have it drvie forward until it sees the wall the jump back to old function
 
 def alt_turn_left():
+    print("alt left turn")
     drivetrain.stop()
-    left_motor_a.set_velocity(50, PERCENT)
-    left_motor_b.set_velocity(50, PERCENT)
-    right_motor_a.set_velocity(60, PERCENT)
-    right_motor_b.set_velocity(60, PERCENT)
-    while (TRUE):
-        if(distance_8.object_distance(MM) < 50):
+    left_motor_a.set_velocity(10, PERCENT)
+    left_motor_b.set_velocity(10, PERCENT)
+    right_motor_a.set_velocity(40, PERCENT)
+    right_motor_b.set_velocity(40, PERCENT)
+    left_motor_a.spin(FORWARD)
+    left_motor_b.spin(FORWARD)
+    right_motor_a.spin(FORWARD)
+    right_motor_b.spin(FORWARD)
+    while (True):
+        front_left_bumper_pressing = bumper_e.pressing()
+        front_right_bumper_pressing = bumper_d.pressing()
+        bumper_pressed = front_left_bumper_pressing or front_right_bumper_pressing
+        if(bumper_pressed):
+            drivetrain.stop()
+            drivetrain.set_drive_velocity(30, PERCENT)
+            turn_right()
             break
-    drivetrain.stop()
-    #This should stop and work fine for driving after?
+        if(distance_8.object_distance(MM) < 50):
+            drivetrain.stop()
+            drivetrain.set_drive_velocity(30, PERCENT)
+            break
 
 def turn_right(): 
+    print("right turn")
     drivetrain.stop()
-    drivetrain.drive_for(REVERSE, 10, MM)
-    drivetrain.turn_for(RIGHT, 90, DEGREES)
+    drivetrain.drive_for(REVERSE, 100, MM)
+    drivetrain.turn_for(RIGHT, 95, DEGREES)
 
-def init():
-    servo_a.set_position(33, DEGREES)
-    calibrate_drivetrain()
+def debug(curr_dist, past_dist, wall_dif):
+    print("curr_dist = " + str(curr_dist))
+    print("past_dist = " + str(past_dist))
+    print("wall _dif = " + str(wall_dif))
 
 def main():
-    init()
+    calibrate_drivetrain()
+    drivetrain.set_drive_velocity(30, PERCENT)
 
     curr_dist = 0
-    past_dist = distance_8.object_distance(MM)
+    past_dist = int(distance_8.object_distance(MM))
     time_since_last_change = 0
 
     while True:
-        curr_dist = distance_8.object_distance(MM)
+        front_left_bumper_pressing = bumper_e.pressing()
+        front_right_bumper_pressing = bumper_d.pressing()
+        bumper_pressed = front_left_bumper_pressing or front_right_bumper_pressing
+
+        curr_dist = int(distance_8.object_distance(MM))
         wall_dif = curr_dist - past_dist
+
         drivetrain.drive(FORWARD)
-        if(curr_dis > (past_dist + 75)):
-            turn_left()
-            #alt_turn_left()
-            time_since_last_change = 0
-        elif(abs(wall_dif) > 5):
-            adjust(wall_dif)
-            time_since_last_change = 0
-        elif(bumper_d.pressing()):
+
+        debug(curr_dist, past_dist, wall_dif)
+
+        if(bumper_pressed):
             turn_right()
             time_since_last_change = 0
-        elif(time_since_last_change > 100):
+            curr_dist = int(distance_8.object_distance(MM))
+
+        elif(curr_dist > (past_dist + 75)):
+            #turn_left()
+            alt_turn_left()
+            time_since_last_change = 0
+            curr_dist = int(distance_8.object_distance(MM))
+
+        elif(abs(wall_dif) > 20):
+            adjust(wall_dif)
+            time_since_last_change = 0
+            curr_dist = int(distance_8.object_distance(MM))
+
+        elif(time_since_last_change > 1000):
+            print("time change")
             drivetrain.turn_for(LEFT, 90, DEGREES)
+
+        elif(curr_dist != past_dist):
+            time_since_last_change = 0
+
         else:
             time_since_last_change += 1
+        
         past_dis = curr_dist
 
 main()
