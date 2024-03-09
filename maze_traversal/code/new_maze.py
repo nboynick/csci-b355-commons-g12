@@ -55,6 +55,7 @@ from vex import *
 def adjust(wall_dif):
     print("adjust")
     drivetrain.stop()
+    #Check if the distance is postive and adjust to or form the wall as nesssiary
     if(wall_dif > 0):
 	    drivetrain.turn_for(LEFT, 15, DEGREES)
     else:
@@ -63,6 +64,7 @@ def adjust(wall_dif):
 
 def turn_left():
     print("left")
+    #Drive past the wall a little then turn and line somewhat back up with the wall.
     drivetrain.stop()
     drivetrain.drive_for(FORWARD, 300, MM)
     drivetrain.turn_for(LEFT, 90, DEGREES)
@@ -72,6 +74,7 @@ def turn_left():
 def alt_turn_left():
     print("alt left turn")
     drivetrain.stop()
+    #Set all the motors to spin in such a way that the outside wheels go further than the inside wheels
     left_motor_a.set_velocity(10, PERCENT)
     left_motor_b.set_velocity(10, PERCENT)
     right_motor_a.set_velocity(40, PERCENT)
@@ -80,6 +83,7 @@ def alt_turn_left():
     left_motor_b.spin(FORWARD)
     right_motor_a.spin(FORWARD)
     right_motor_b.spin(FORWARD)
+    #Do this untile either the bumpers are pressed or we get too close to the wall
     while (True):
         front_left_bumper_pressing = bumper_e.pressing()
         front_right_bumper_pressing = bumper_d.pressing()
@@ -96,10 +100,12 @@ def alt_turn_left():
 
 def turn_right(): 
     print("right turn")
+    #Back up then turn right in order to not hit a wall
     drivetrain.stop()
     drivetrain.drive_for(REVERSE, 100, MM)
     drivetrain.turn_for(RIGHT, 95, DEGREES)
 
+    #Simple Debugging algorithm to see what goes wrong
 def debug(curr_dist, past_dist, wall_dif):
     print("curr_dist = " + str(curr_dist))
     print("past_dist = " + str(past_dist))
@@ -107,17 +113,27 @@ def debug(curr_dist, past_dist, wall_dif):
 
 def main():
     calibrate_drivetrain()
-    drivetrain.set_drive_velocity(30, PERCENT)
+    #Set the speed of the robot
+    drivetrain.set_drive_velocity(40, PERCENT)
 
+    #Enter the maze
+    drivetrain.drive(FORWARD)
+    wait(0.7,SECONDS)
+    drivetrain.stop()
+
+    #Variables that update while in the while true
     curr_dist = 0
     past_dist = int(distance_8.object_distance(MM))
     time_since_last_change = 0
+    adjust_count = 0
 
     while True:
+        #Check if the bumpers are pressed
         front_left_bumper_pressing = bumper_e.pressing()
         front_right_bumper_pressing = bumper_d.pressing()
         bumper_pressed = front_left_bumper_pressing or front_right_bumper_pressing
 
+        #Get the distance change along with the current distance
         curr_dist = int(distance_8.object_distance(MM))
         wall_dif = curr_dist - past_dist
 
@@ -125,32 +141,53 @@ def main():
 
         debug(curr_dist, past_dist, wall_dif)
 
+        #If we are hitting a wall in front of us do a right turn
         if(bumper_pressed):
             turn_right()
             time_since_last_change = 0
             curr_dist = int(distance_8.object_distance(MM))
+            adjust_count = 0
 
+        #If the left wall is too far away do a left turn
         elif(curr_dist > (past_dist + 75)):
             #turn_left()
             alt_turn_left()
             time_since_last_change = 0
             curr_dist = int(distance_8.object_distance(MM))
+            adjust_count = 0
 
-        elif(abs(wall_dif) > 20):
-            adjust(wall_dif)
-            time_since_last_change = 0
-            curr_dist = int(distance_8.object_distance(MM))
+        #If the wall diffrence is below what is above and above 25 do a small adjust to drive somewhat straight
+        elif(abs(wall_dif) > 25):
+            #If we adjust three times in a row go forward
+            if (adjust_count >= 3):
+                adjust_count = 0
+                drivetrain.drive(FORWARD)
+                wait(0.5, SECONDS)
+                drivetrain.stop()
+            #Else adjust
+            else:
+                adjust(wall_dif)
+                time_since_last_change = 0
+                curr_dist = int(distance_8.object_distance(MM))
+                adjust_count += 1
 
+        #If we are stuck on something for long enough move
+        #WAS never used
         elif(time_since_last_change > 1000):
             print("time change")
             drivetrain.turn_for(LEFT, 90, DEGREES)
+            adjust_count = 0
 
+        #If we have a change in the distances reset last_time_change
         elif(curr_dist != past_dist):
             time_since_last_change = 0
+            adjust_count = 0
 
+        #Update the we did not move counter
         else:
             time_since_last_change += 1
         
+        #Mark the old distance
         past_dis = curr_dist
 
 main()
