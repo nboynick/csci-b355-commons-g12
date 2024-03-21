@@ -1,0 +1,100 @@
+{
+    "mode": "Text",
+    "textContent": "",
+    "textLanguage": "python",
+    "rconfig": [
+        {
+            "port": [
+                1
+            ],
+            "name": "limit_switch_a",
+            "customName": false,
+            "deviceType": "LimitSwitch",
+            "deviceClass": "limit",
+            "setting": {},
+            "triportSourcePort": 22
+        },
+        {
+            "port": [
+                2
+            ],
+            "name": "limit_switch_b",
+            "customName": false,
+            "deviceType": "LimitSwitch",
+            "deviceClass": "limit",
+            "setting": {},
+            "triportSourcePort": 22
+        },
+        {
+            "port": [
+                1
+            ],
+            "name": "motor_1",
+            "customName": false,
+            "deviceType": "Motor",
+            "deviceClass": "motor",
+            "setting": {
+                "reversed": "false",
+                "fwd": "forward",
+                "rev": "reverse"
+            }
+        },
+        {
+            "port": [
+                2
+            ],
+            "name": "motor_2",
+            "customName": false,
+            "deviceType": "Motor",
+            "deviceClass": "motor",
+            "setting": {
+                "reversed": "false",
+                "fwd": "forward",
+                "rev": "reverse"
+            }
+        },
+        {
+            "port": [
+                3
+            ],
+            "name": "potentiometer_c",
+            "customName": true,
+            "deviceType": "PotentiometerV2",
+            "deviceClass": "potV2",
+            "setting": {},
+            "triportSourcePort": 22
+        },
+        {
+            "port": [
+                4
+            ],
+            "name": "potentiometer_d",
+            "customName": true,
+            "deviceType": "PotentiometerV2",
+            "deviceClass": "potV2",
+            "setting": {},
+            "triportSourcePort": 22
+        },
+        {
+            "port": [
+                5
+            ],
+            "name": "servo_e",
+            "customName": false,
+            "deviceType": "Servo",
+            "deviceClass": "servo",
+            "setting": {},
+            "triportSourcePort": 22
+        }
+    ],
+    "slot": 0,
+    "platform": "EXP",
+    "sdkVersion": "20240219.10.00.00",
+    "appVersion": "3.1.0",
+    "minVersion": "3.1.0",
+    "fileFormat": "1.2.0",
+    "icon": "",
+    "targetBrainGen": "First",
+    "v5SoundsEnabled": false,
+    "target": "Physical"
+}
