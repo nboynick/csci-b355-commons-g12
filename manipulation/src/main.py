@@ -9,10 +9,10 @@ brain = Brain()
 brain_inertial = Inertial()
 limit_switch_a = Limit(brain.three_wire_port.a)
 limit_switch_b = Limit(brain.three_wire_port.b)
-motor_1 = Motor(Ports.PORT1, False)
-motor_2 = Motor(Ports.PORT2, False)
-potentiometer_c = PotentiometerV2(brain.three_wire_port.c)
-potentiometer_d = PotentiometerV2(brain.three_wire_port.d)
+motor_1 = Motor(Ports.PORT1, True)
+motor_2 = Motor(Ports.PORT2, True)
+potentiometer_c = PotentiometerV2(brain.three_wire_port.d)
+potentiometer_d = PotentiometerV2(brain.three_wire_port.f)
 servo_e = Servo(brain.three_wire_port.e)
 
 
@@ -23,7 +23,7 @@ wait(100, MSEC)
 # ------------------------------------------
 #
 # 	Project:      Manipulation Demonstration
-#	Author:       Creed (Goldencode19), Augie, Nathaniel (nboynick)
+#	Author:       Creed (Goldencode20), Augie, Nathaniel (nboynick)
 #	Created:      2024-03-21
 #	Description:  A 2-joint planar robot manipulator that can pick up and move cans.
 #
@@ -48,17 +48,19 @@ def get_theta_1():
     # Theta 1 is the angle on the first, inner, shoulder joint
     pass
 
-def calibration(pot_c, pot_d):
+def calibration():
     # Motor 1 Calibration
     motor_1.spin(REVERSE)
     while not limit_switch_a.pressing():
-        pass
+        temp = motor_1.temperature(PERCENT)
+        if temp > 60:
+            motor_1.stop()
     motor_1.stop()
     motor_1.set_position(0, DEGREES)
     motor_2.set_position(0, DEGREES)
     pot_c = potentiometer_c.angle(DEGREES)
-    pot_d = potentiometer_d.angle(DEGREES)
     # Motor 2 Calibration
+    return (pot_c, 0)
 
 def init():
     motor_1.set_velocity(20, PERCENT)
@@ -75,14 +77,22 @@ def main():
     # Initialization (Set motor speed, etc.)
     init()
 
+    print("Start:")
+    print(potentiometer_c.angle(DEGREES))
+
     # Calibration of the motor encoders
-    calibration(potentiometer_c_offset, potentiometer_d_offset)
+    potentiometer_c_offset, potentiometer_d_offset = calibration()
+
+    print("Angle:")
+    print(potentiometer_c_offset)
 
     # Move motor 1 to show our understanding
-    motor_1.spin_for(FORWARD, 6, TURNS, wait=False) # Spin output arm by 30 degrees
-    while motor_1.is_spinning():
-        temp = motor_1.temperature(PERCENT)
-        if temp > 60:
-            motor_1.stop()
-        print(temp)
-        wait(50, MSEC)
+    # motor_1.spin_for(FORWARD, calculate_shoulder_rotation_count(), TURNS, wait=False) # Spin output arm by 30 degrees
+    # while motor_1.is_spinning():
+    #     temp = motor_1.temperature(PERCENT)
+    #     if temp > 60:
+    #         motor_1.stop()
+    #     print(temp)
+    #     wait(50, MSEC)
+
+main()
