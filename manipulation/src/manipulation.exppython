@@ -37,7 +37,8 @@
                 "reversed": "false",
                 "fwd": "forward",
                 "rev": "reverse"
-            }
+            },
+            "triportSourcePort": 22
         },
         {
             "port": [
@@ -51,7 +52,8 @@
                 "reversed": "false",
                 "fwd": "forward",
                 "rev": "reverse"
-            }
+            },
+            "triportSourcePort": 22
         },
         {
             "port": [
